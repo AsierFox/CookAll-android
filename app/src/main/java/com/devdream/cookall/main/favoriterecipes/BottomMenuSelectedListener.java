@@ -1,11 +1,12 @@
-package com.devdream.cookall.main;
+package com.devdream.cookall.main.favoriterecipes;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 
 import com.devdream.cookall.R;
+import com.devdream.cookall.main.MainActivity;
 
 public class BottomMenuSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -17,17 +18,28 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        final FragmentManager fragmentManager = mainActivity.getSupportFragmentManager();
+
+        // Refactor to method
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                mainActivity.mTextMessage.setText(R.string.title_home);
+                if (fragmentManager.findFragmentByTag(FavoriteRecipeItemFragment.TAG) == null) {
+                    fragmentManager.beginTransaction()
+                            .add(R.id.fragment_container, new FavoriteRecipeItemFragment(), FavoriteRecipeItemFragment.TAG)
+                            .commit();
+                }
                 return true;
             case R.id.navigation_dashboard:
-                mainActivity.mTextMessage.setText(R.string.title_dashboard);
+
                 return true;
             case R.id.navigation_notifications:
-                mainActivity.mTextMessage.setText(R.string.title_notifications);
+
                 return true;
         }
+
+//        fragmentTransaction.disallowAddToBackStack();
+
         return false;
     }
 
