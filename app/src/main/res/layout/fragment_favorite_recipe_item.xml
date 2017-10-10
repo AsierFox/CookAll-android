@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="MEWWW" />
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:layout_column="0"
+            android:layout_rowSpan="3"
+            android:id="@+id/recipe_main_photo"
+            android:contentDescription="@string/recipe_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/img" />
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="1"
+            android:id="@+id/recipe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textStyle="bold"
+            android:text="Recipe REMOVE" />
+
+        <TextView
+            android:layout_column="2"
+            android:layout_row="1"
+            android:id="@+id/recipe_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textStyle="bold"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit felis et quam faucibus maximus. Proin tellus ante.." />
+
+    </GridLayout>
 
 </LinearLayout>
