@@ -7,8 +7,6 @@
     android:name="com.devdream.cookall.main.FavoriteRecipeItemFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
     app:layoutManager="LinearLayoutManager"
     tools:context="com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment"
     tools:listitem="@layout/fragment_favorite_recipe_item" />
