@@ -31,6 +31,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.devdream.cookall.main.MainActivity" />
         </activity>
+        <activity android:name=".recipe.CreateRecipeActivity" />
         <activity
             android:name=".recipe.detail.RecipeDetailActivity"
             android:label="@string/title_activity_recipe_detail"
