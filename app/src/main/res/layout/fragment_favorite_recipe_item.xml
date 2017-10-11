@@ -1,49 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp">
+    android:paddingRight="15dp"
+    android:background="@drawable/border_bottom">
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:columnCount="3"
-        android:rowCount="3">
+    <ImageView
+        android:id="@+id/recipe_main_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/recipe_logo"
+        android:background="@drawable/img" />
 
-        <ImageView
-            android:layout_column="0"
-            android:layout_rowSpan="3"
-            android:id="@+id/recipe_main_photo"
-            android:contentDescription="@string/recipe_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/img" />
+    <TextView
+        android:id="@+id/recipe_name"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:text="Recipe REMOVE" />
 
-        <TextView
-            android:layout_column="1"
-            android:layout_row="1"
-            android:id="@+id/recipe_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:textStyle="bold"
-            android:text="Recipe REMOVE" />
+    <TextView
+        android:id="@+id/recipe_description"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_below="@+id/recipe_name"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit felis et quam faucibus maximus. Proin tellus ante.." />
 
-        <TextView
-            android:layout_column="2"
-            android:layout_row="1"
-            android:id="@+id/recipe_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:textStyle="bold"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit felis et quam faucibus maximus. Proin tellus ante.." />
+    <TextView
+        android:id="@+id/recipe_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="3 Likes" />
 
-    </GridLayout>
+    <TextView
+        android:id="@+id/recipe_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_likes"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="3 Comment" />
 
-</LinearLayout>
+</RelativeLayout>
