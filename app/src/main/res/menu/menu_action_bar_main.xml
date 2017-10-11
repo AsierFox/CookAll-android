@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.devdream.cookall.main.MainActivity">
+
+    <item
+        app:showAsAction="always"
+        android:title="@string/create_a_recipe"
+        android:icon="@drawable/app_logo" />
+
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/my_profile" />
+
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/action_settings" />
+
+</menu>

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
@@ -36,9 +38,21 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_action_bar_main, menu);
+        return true;
+    }
+
+    @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
         Intent intent = new Intent(this, RecipeDetailActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d("MEW", "Menu item selected!");
+        return false;
     }
 
     private void disableBackButton() {
