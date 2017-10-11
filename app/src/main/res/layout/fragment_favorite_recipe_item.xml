@@ -5,8 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:choiceMode="singleChoice">
+    android:paddingRight="15dp">
 
     <ImageView
         android:id="@+id/recipe_main_photo"
