@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
     public void login(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
