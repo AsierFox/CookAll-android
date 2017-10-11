@@ -5,8 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:background="@drawable/border_bottom">
+    android:paddingRight="15dp">
 
     <ImageView
         android:id="@+id/recipe_main_photo"
@@ -14,6 +13,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/recipe_logo"
         android:background="@drawable/img" />
@@ -35,29 +35,48 @@
         android:layout_toEndOf="@+id/recipe_main_photo"
         android:layout_below="@+id/recipe_name"
         android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
         android:textSize="12sp"
         android:textColor="#a7a7a7"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit felis et quam faucibus maximus. Proin tellus ante.." />
+
+    <ImageButton
+        android:id="@+id/add_remove_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_below="@+id/recipe_description"
+        android:background="@drawable/ic_add_favorite_border_24dp" />
 
     <TextView
         android:id="@+id/recipe_likes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_toEndOf="@+id/add_remove_favorite"
         android:layout_below="@+id/recipe_description"
         android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
         android:textSize="12sp"
         android:textColor="#a7a7a7"
         android:text="3 Likes" />
+
+    <ImageButton
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_likes"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/ic_comment_black_24dp" />
 
     <TextView
         android:id="@+id/recipe_comments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/recipe_likes"
+        android:layout_toEndOf="@+id/comments"
         android:layout_below="@+id/recipe_description"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="5dp"
         android:textSize="12sp"
         android:textColor="#a7a7a7"
         android:text="3 Comment" />
