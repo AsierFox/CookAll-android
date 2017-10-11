@@ -6,6 +6,7 @@
     tools:context="com.devdream.cookall.main.MainActivity">
 
     <item
+        android:id="@+id/create_new_recipe"
         app:showAsAction="always"
         android:title="@string/create_a_recipe"
         android:icon="@drawable/app_logo" />

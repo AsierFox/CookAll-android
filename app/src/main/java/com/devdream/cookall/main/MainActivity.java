@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
 import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
+import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 
 public class MainActivity extends AppCompatActivity implements FavoriteRecipeItemFragment.OnListFragmentInteractionListener {
@@ -51,7 +52,14 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d("MEW", "Menu item selected!");
+
+        switch (item.getItemId()) {
+            case R.id.create_new_recipe:
+                Intent intent = new Intent(this, CreateRecipeActivity.class);
+                startActivity(intent);
+                return true;
+        }
+
         return false;
     }
 

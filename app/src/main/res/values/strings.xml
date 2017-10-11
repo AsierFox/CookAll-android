@@ -27,6 +27,6 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="my_profile">My profile</string>
-    <string name="create_a_recipe">Create a recipe!</string>
+    <string name="create_a_recipe">Create a new recipe!</string>
 
 </resources>

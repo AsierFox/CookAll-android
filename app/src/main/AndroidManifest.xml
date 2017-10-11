@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".login.LoginActivity"
             android:label="@string/login">
@@ -23,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".main.MainActivity"
             android:label="@string/title_activity_main"
@@ -31,11 +33,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.devdream.cookall.main.MainActivity" />
         </activity>
-        <activity android:name=".recipe.CreateRecipeActivity" />
+
+        <activity android:name=".recipe.create.CreateRecipeActivity" />
+
         <activity
             android:name=".recipe.detail.RecipeDetailActivity"
             android:label="@string/title_activity_recipe_detail"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>
