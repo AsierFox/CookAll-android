@@ -17,7 +17,7 @@
         android:layout_alignParentStart="true"
         android:adjustViewBounds="true"
         android:contentDescription="@string/recipe_logo"
-        android:background="@drawable/img" />
+        android:background="@drawable/img_circle_effect" />
 
     <TextView
         android:id="@+id/recipe_name"

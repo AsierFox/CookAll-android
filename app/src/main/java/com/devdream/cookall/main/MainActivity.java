@@ -1,17 +1,15 @@
 package com.devdream.cookall.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.MenuBuilder;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.favoriterecipes.BottomMenuSelectedListener;
 import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
 import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
+import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 
 public class MainActivity extends AppCompatActivity implements FavoriteRecipeItemFragment.OnListFragmentInteractionListener {
 
@@ -39,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
-        Log.d("MEW", "Clicked on list item!!");
+        Intent intent = new Intent(this, RecipeDetailActivity.class);
+        startActivity(intent);
     }
 
     private void disableBackButton() {

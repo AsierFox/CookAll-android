@@ -1,4 +1,4 @@
-package com.devdream.cookall.main.favoriterecipes;
+package com.devdream.cookall.main;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.MainActivity;
+import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
 
 public class BottomMenuSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
 
