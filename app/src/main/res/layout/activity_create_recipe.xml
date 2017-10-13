@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.devdream.cookall.recipe.create.CreateRecipeActivity">
+    tools:context="com.devdream.cookall.recipe.create.CreateRecipeActivity"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:paddingTop="10dp">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/step"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/title"
+        android:gravity="top"
+        android:hint="Your Message"
+        android:fitsSystemWindows="true"
+        android:breakStrategy="balanced"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:padding="5dp" />
+
+    <EditText
+        android:id="@+id/ingredient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step"
+        android:hint="@string/ingredient"
+        android:inputType="text"
+        android:layout_toStartOf="@+id/add_ingredient" />
+
+    <ImageButton
+        android:id="@+id/add_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_add_full_24dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/step"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

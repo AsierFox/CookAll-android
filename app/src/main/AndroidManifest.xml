@@ -34,11 +34,12 @@
                 android:value="com.devdream.cookall.main.MainActivity" />
         </activity>
 
-        <activity android:name=".recipe.create.CreateRecipeActivity" />
+        <activity
+            android:name=".recipe.create.CreateRecipeActivity"
+            android:label="@string/create_new_recipe" />
 
         <activity
             android:name=".recipe.detail.RecipeDetailActivity"
-            android:label="@string/title_activity_recipe_detail"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 

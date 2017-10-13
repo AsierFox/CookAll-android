@@ -28,5 +28,10 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="my_profile">My profile</string>
     <string name="create_a_recipe">Create a new recipe!</string>
+    <string name="create_new_recipe">Create new recipe</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="step">Step</string>
+    <string name="ingredient">Ingredient</string>
 
 </resources>
