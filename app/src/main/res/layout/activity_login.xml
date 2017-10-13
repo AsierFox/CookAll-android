@@ -12,7 +12,8 @@
     android:paddingRight="24dp"
     android:background="@color/background_floating_material_light">
 
-    <ImageView android:id="@+id/logo_imageView"
+    <ImageView
+        android:id="@+id/logo_imageView"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginBottom="25dp"
@@ -20,19 +21,22 @@
         android:background="@drawable/app_logo"
         android:contentDescription="@string/app_logo" />
 
-    <EditText android:id="@+id/email_editText"
+    <EditText
+        android:id="@+id/email_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:hint="@string/email" />
 
-    <EditText android:id="@+id/password_editText"
+    <EditText
+        android:id="@+id/password_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:hint="@string/password" />
 
-    <Button android:id="@+id/login_button"
+    <Button
+        android:id="@+id/login_button"
         android:onClick="login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
