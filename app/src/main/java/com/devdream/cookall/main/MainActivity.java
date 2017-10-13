@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
@@ -61,6 +63,18 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
         }
 
         return false;
+    }
+
+    public void likeRecipe(View view) {
+        Toast.makeText(this, "Liked!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void shareRecipe(View view) {
+        Toast.makeText(this, "Shared!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void favoriteRecipe(View view) {
+        Toast.makeText(this, "Favorited!", Toast.LENGTH_SHORT).show();
     }
 
     private void disableBackButton() {
