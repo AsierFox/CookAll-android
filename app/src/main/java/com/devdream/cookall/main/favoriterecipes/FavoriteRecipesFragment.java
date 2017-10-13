@@ -20,9 +20,9 @@ import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent.DummyItem;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class FavoriteRecipeItemFragment extends Fragment {
+public class FavoriteRecipesFragment extends Fragment {
 
-    public static final String TAG = "com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment";
+    public static final String TAG = "com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment";
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -34,13 +34,13 @@ public class FavoriteRecipeItemFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public FavoriteRecipeItemFragment() {
+    public FavoriteRecipesFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static FavoriteRecipeItemFragment newInstance(int columnCount) {
-        FavoriteRecipeItemFragment fragment = new FavoriteRecipeItemFragment();
+    public static FavoriteRecipesFragment newInstance(int columnCount) {
+        FavoriteRecipesFragment fragment = new FavoriteRecipesFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);

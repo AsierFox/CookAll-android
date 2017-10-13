@@ -4,20 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
+import com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment;
 import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 
-public class MainActivity extends AppCompatActivity implements FavoriteRecipeItemFragment.OnListFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements FavoriteRecipesFragment.OnListFragmentInteractionListener {
 
     private BottomNavigationView bottomNavigationView;
     private BottomMenuSelectedListener bottomMenuSelectedListener;
+
+    protected FavoriteRecipesFragment favoriteRecipesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
 
         disableBackButton();
 
-        bottomMenuSelectedListener = new BottomMenuSelectedListener(this);
+        favoriteRecipesFragment = new FavoriteRecipesFragment();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomMenuSelectedListener);
@@ -34,8 +35,10 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipeIte
         // TODO Refactor
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fragment_container, new FavoriteRecipeItemFragment(), FavoriteRecipeItemFragment.TAG)
+                .add(R.id.fragment_container, favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
                 .commit();
+
+        bottomMenuSelectedListener = new BottomMenuSelectedListener(this);
     }
 
     @Override

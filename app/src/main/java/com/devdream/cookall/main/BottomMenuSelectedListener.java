@@ -6,8 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.MainActivity;
-import com.devdream.cookall.main.favoriterecipes.FavoriteRecipeItemFragment;
+import com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment;
 
 public class BottomMenuSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -25,9 +24,9 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
         // Refactor to method
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                if (fragmentManager.findFragmentByTag(FavoriteRecipeItemFragment.TAG) == null) {
+                if (fragmentManager.findFragmentByTag(FavoriteRecipesFragment.TAG) == null) {
                     fragmentManager.beginTransaction()
-                            .add(R.id.fragment_container, new FavoriteRecipeItemFragment(), FavoriteRecipeItemFragment.TAG)
+                            .add(R.id.fragment_container, mainActivity.favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
                             .commit();
                 }
                 return true;

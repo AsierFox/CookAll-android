@@ -13,15 +13,15 @@ import java.util.List;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link FavoriteRecipeItemFragment.OnListFragmentInteractionListener}.
+ * specified {@link FavoriteRecipesFragment.OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class FavoriteRecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<FavoriteRecipeItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<DummyItem> mValues;
-    private final FavoriteRecipeItemFragment.OnListFragmentInteractionListener mListener;
+    private final FavoriteRecipesFragment.OnListFragmentInteractionListener mListener;
 
-    public FavoriteRecipeItemRecyclerViewAdapter(List<DummyItem> items, FavoriteRecipeItemFragment.OnListFragmentInteractionListener listener) {
+    public FavoriteRecipeItemRecyclerViewAdapter(List<DummyItem> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
