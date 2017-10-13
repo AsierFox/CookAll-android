@@ -23,10 +23,12 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
 
         // Refactor to method
         switch (item.getItemId()) {
-            case R.id.navigation_home:
+            case R.id.favorite_recipes_list:
                 if (fragmentManager.findFragmentByTag(FavoriteRecipesFragment.TAG) == null) {
                     fragmentManager.beginTransaction()
-                            .add(R.id.fragment_container, mainActivity.favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
+                            .add(R.id.fragment_container,
+                                    mainActivity.favoriteRecipesFragment,
+                                    FavoriteRecipesFragment.TAG)
                             .commit();
                 }
                 return true;
