@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#009688</color>
-    <color name="primary_dark">#00796B</color>
-    <color name="primary_light">#B2DFDB</color>
-    <color name="accent">#4CAF50</color>
-    <color name="primary_text">#212121</color>
-    <color name="secondary_text">#757575</color>
-    <color name="icons">#FFFFFF</color>
-    <color name="divider">#BDBDBD</color>
+    <!-- Themes: https://material.io/color -->
+
+    <!-- Pink material -->
+    <color name="primaryColor">#ec407a</color>
+    <color name="primaryLightColor">#ff77a9</color>
+    <color name="primaryDarkColor">#b4004e</color>
+    <color name="secondaryColor">#c2185b</color>
+    <color name="accent">#c2185b</color>
+    <color name="secondaryLightColor">#fa5788</color>
+    <color name="secondaryDarkColor">#8c0032</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
 
 </resources>
