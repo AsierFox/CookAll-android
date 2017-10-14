@@ -8,7 +8,6 @@
     </style>
 
     <style name="primaryButton" parent="Theme.AppCompat">
-        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
         <item name="colorButtonNormal">@color/primaryColor</item>
         <item name="colorControlHighlight">@color/accent</item>
     </style>
