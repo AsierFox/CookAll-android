@@ -10,6 +10,6 @@
 
     <stroke
         android:width="10dp"
-        android:color="@color/background_floating_material_light" />
+        android:color="#eee" />
 
 </shape>
