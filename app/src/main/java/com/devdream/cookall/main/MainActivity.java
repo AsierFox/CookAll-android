@@ -12,8 +12,10 @@ import android.widget.Toast;
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment;
 import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
+import com.devdream.cookall.profile.UserProfileActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
+import com.devdream.cookall.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements FavoriteRecipesFragment.OnListFragmentInteractionListener {
 
@@ -60,8 +62,16 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipesFr
 
         switch (item.getItemId()) {
             case R.id.create_new_recipe:
-                Intent intent = new Intent(this, CreateRecipeActivity.class);
-                startActivity(intent);
+                Intent newRecipeIntent = new Intent(this, CreateRecipeActivity.class);
+                startActivity(newRecipeIntent);
+                return true;
+            case R.id.profile:
+                Intent profileIntent = new Intent(this, UserProfileActivity.class);
+                startActivity(profileIntent);
+                return true;
+            case R.id.settings:
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                startActivity(settingsIntent);
                 return true;
         }
 

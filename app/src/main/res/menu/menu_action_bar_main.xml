@@ -12,10 +12,12 @@
         android:icon="@drawable/app_logo" />
 
     <item
+        android:id="@+id/profile"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/my_profile" />
 
     <item
+        android:id="@+id/settings"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/action_settings" />
 
