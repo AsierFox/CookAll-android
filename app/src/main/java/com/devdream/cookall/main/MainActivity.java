@@ -1,6 +1,7 @@
 package com.devdream.cookall.main;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -11,18 +12,22 @@ import android.widget.Toast;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.profile.UserProfileActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 import com.devdream.cookall.settings.SettingsActivity;
 
-public class MainActivity extends AppCompatActivity implements FavoriteRecipesFragment.OnListFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements
+        FavoriteRecipesFragment.OnListFragmentInteractionListener,
+        ExploreRecipesFragment.OnFragmentInteractionListener {
 
     private BottomNavigationView bottomNavigationView;
     private BottomMenuSelectedListener bottomMenuSelectedListener;
 
     protected FavoriteRecipesFragment favoriteRecipesFragment;
+    protected ExploreRecipesFragment exploreRecipesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +37,17 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipesFr
         disableBackButton();
 
         favoriteRecipesFragment = new FavoriteRecipesFragment();
+        exploreRecipesFragment = new ExploreRecipesFragment();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomMenuSelectedListener = new BottomMenuSelectedListener(this);
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomMenuSelectedListener);
 
-        // TODO Refactor
+        // TODO Refactor to BottomMenuSelectedListener
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragment_container, favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
                 .commit();
-
-        bottomMenuSelectedListener = new BottomMenuSelectedListener(this);
     }
 
     @Override
@@ -55,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipesFr
     public void onListFragmentInteraction(Recipe item) {
         Intent intent = new Intent(this, RecipeDetailActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
     }
 
     @Override
