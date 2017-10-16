@@ -52,6 +52,21 @@ public class MainActivity extends AppCompatActivity implements
                 .beginTransaction()
                 .add(R.id.fragment_container, favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
                 .commit();
+
+        // TODO Retrofit call example, refactor to presenter
+//        QuestionAPIService apiService = RestClient.getClient().create(QuestionAPIService.class);
+//        Call<ArrayList<Recipe>> call = apiService.fetchQuestions("android");
+//        call.enqueue(new Callback<QuestionList>() {
+//            @Override
+//            public void onResponse(Call<QuestionList> call, Response<QuestionList> response) {
+//                Log.d(TAG, "Total number of questions fetched : " + response.body().getQuestions().size());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<QuestionList> call, Throwable t) {
+//                Log.e(TAG, "Got error : " + t.getLocalizedMessage());
+//            }
+//        });
     }
 
     @Override
