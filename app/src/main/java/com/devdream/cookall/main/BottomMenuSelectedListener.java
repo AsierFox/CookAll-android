@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
+import com.devdream.cookall.main.mine.MyRecipesFragment;
 
 public class BottomMenuSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -22,8 +23,6 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         final FragmentManager fragmentManager = mainActivity.getSupportFragmentManager();
-
-        Log.d("MEW", "Hello world! :D" + item.getItemId());
 
         // Refactor to method
         switch (item.getItemId()) {
@@ -60,7 +59,20 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
                         .commit();
                 return true;
             case R.id.navigation_notifications:
+                if (fragmentManager.findFragmentByTag(MyRecipesFragment.TAG) == null) {
+                    fragmentManager
+                            .beginTransaction()
+                            .add(R.id.fragment_container,
+                                    mainActivity.myRecipesFragment,
+                                    MyRecipesFragment.TAG)
+                            .commit();
+                }
 
+                fragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_container,
+                                mainActivity.myRecipesFragment)
+                        .commit();
                 return true;
         }
 

@@ -14,6 +14,7 @@ import com.devdream.cookall.R;
 import com.devdream.cookall.core.models.Recipe;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
+import com.devdream.cookall.main.mine.MyRecipesFragment;
 import com.devdream.cookall.profile.UserProfileActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
@@ -21,13 +22,15 @@ import com.devdream.cookall.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements
         FavoriteRecipesFragment.OnListFragmentInteractionListener,
-        ExploreRecipesFragment.OnFragmentInteractionListener {
+        ExploreRecipesFragment.OnFragmentInteractionListener,
+        MyRecipesFragment.OnFragmentInteractionListener {
 
     private BottomNavigationView bottomNavigationView;
     private BottomMenuSelectedListener bottomMenuSelectedListener;
 
     protected FavoriteRecipesFragment favoriteRecipesFragment;
     protected ExploreRecipesFragment exploreRecipesFragment;
+    protected MyRecipesFragment myRecipesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements
 
         favoriteRecipesFragment = new FavoriteRecipesFragment();
         exploreRecipesFragment = new ExploreRecipesFragment();
+        myRecipesFragment = new MyRecipesFragment();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomMenuSelectedListener = new BottomMenuSelectedListener(this);
