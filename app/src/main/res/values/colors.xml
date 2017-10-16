@@ -4,14 +4,14 @@
     <!-- Themes: https://material.io/color -->
 
     <!-- Pink material -->
-    <color name="primaryColor">#ff6575</color>
-    <color name="primaryLightColor">#fcae87</color>
-    <color name="primaryDarkColor">#df417c</color>
-    <color name="secondaryColor">#ff896f</color>
-    <color name="accent">#ff6575</color>
-    <color name="secondaryLightColor">#fcae87</color>
+    <color name="accent">#fbac85</color>
+    <color name="primaryColor">#fbac85</color>
+    <color name="primaryLightColor">#fbac85</color>
+    <color name="primaryDarkColor">#ff8e6c</color>
+    <color name="secondaryColor">#ff6275</color>
+    <color name="secondaryLightColor">#ff6275</color>
     <color name="secondaryDarkColor">#f64c79</color>
-    <color name="primaryTextColor">#21283b</color>
+    <color name="primaryTextColor">#24273a</color>
     <color name="secondaryTextColor">#ffffff</color>
 
     <color name="black_overlay">#66000000</color>
