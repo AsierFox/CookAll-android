@@ -21,12 +21,15 @@ import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 import com.devdream.cookall.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements
+        MainListener,
         FavoriteRecipesFragment.OnListFragmentInteractionListener,
         ExploreRecipesFragment.OnFragmentInteractionListener,
         MyRecipesFragment.OnFragmentInteractionListener {
 
     private BottomNavigationView bottomNavigationView;
     private BottomMenuSelectedListener bottomMenuSelectedListener;
+
+    private MainPresenter mainPresenter;
 
     protected FavoriteRecipesFragment favoriteRecipesFragment;
     protected ExploreRecipesFragment exploreRecipesFragment;
@@ -67,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements
 //                Log.e(TAG, "Got error : " + t.getLocalizedMessage());
 //            }
 //        });
+
+        mainPresenter = new MainPresenter(this);
     }
 
     @Override
@@ -106,16 +111,19 @@ public class MainActivity extends AppCompatActivity implements
         return false;
     }
 
+    @Override
     public void likeRecipe(View view) {
-        Toast.makeText(this, "Liked!", Toast.LENGTH_SHORT).show();
+        mainPresenter.likeRecipe(view);
     }
 
+    @Override
     public void shareRecipe(View view) {
-        Toast.makeText(this, "Shared!", Toast.LENGTH_SHORT).show();
+        mainPresenter.shareRecipe(view);
     }
 
+    @Override
     public void favoriteRecipe(View view) {
-        Toast.makeText(this, "Favorited!", Toast.LENGTH_SHORT).show();
+        mainPresenter.favoriteRecipe(view);
     }
 
     private void disableBackButton() {
