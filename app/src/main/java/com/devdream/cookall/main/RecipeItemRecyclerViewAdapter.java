@@ -1,4 +1,4 @@
-package com.devdream.cookall.main.favoriterecipes;
+package com.devdream.cookall.main;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,21 +7,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent.DummyItem;
+import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
+import com.devdream.cookall.core.models.Recipe;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link Recipe} and makes a call to the
  * specified {@link FavoriteRecipesFragment.OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class FavoriteRecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<FavoriteRecipeItemRecyclerViewAdapter.ViewHolder> {
+public class RecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<RecipeItemRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Recipe> mValues;
     private final FavoriteRecipesFragment.OnListFragmentInteractionListener mListener;
 
-    public FavoriteRecipeItemRecyclerViewAdapter(List<DummyItem> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
+    public RecipeItemRecyclerViewAdapter(List<Recipe> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -58,7 +59,7 @@ public class FavoriteRecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public Recipe mItem;
 
         public ViewHolder(View view) {
             super(view);

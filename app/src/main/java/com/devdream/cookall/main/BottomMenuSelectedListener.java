@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment;
+import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 
 public class BottomMenuSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
 

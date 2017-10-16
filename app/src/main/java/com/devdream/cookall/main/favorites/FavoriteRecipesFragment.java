@@ -1,7 +1,6 @@
-package com.devdream.cookall.main.favoriterecipes;
+package com.devdream.cookall.main.favorites;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -12,9 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.MainActivity;
-import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
-import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent.DummyItem;
+import com.devdream.cookall.main.RecipeItemRecyclerViewAdapter;
+import com.devdream.cookall.main.DummyListContent;
+import com.devdream.cookall.core.models.Recipe;
 
 /**
  * A fragment representing a list of Items.
@@ -72,7 +71,7 @@ public class FavoriteRecipesFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new FavoriteRecipeItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new RecipeItemRecyclerViewAdapter(DummyListContent.ITEMS, mListener));
         }
         return view;
     }
@@ -107,7 +106,7 @@ public class FavoriteRecipesFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Recipe item);
     }
 
 }

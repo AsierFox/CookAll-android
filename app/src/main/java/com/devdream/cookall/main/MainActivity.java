@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.main.favoriterecipes.FavoriteRecipesFragment;
-import com.devdream.cookall.main.favoriterecipes.dummy.DummyContent;
+import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.profile.UserProfileActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements FavoriteRecipesFr
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(Recipe item) {
         Intent intent = new Intent(this, RecipeDetailActivity.class);
         startActivity(intent);
     }
