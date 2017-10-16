@@ -12,8 +12,10 @@
     <color name="secondaryLightColor">#ff6275</color>
     <color name="secondaryDarkColor">#f64c79</color>
     <color name="primaryTextColor">#24273a</color>
-    <color name="secondaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">@color/white</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="white">#ffffff</color>
 
 </resources>
