@@ -2,19 +2,35 @@ package com.devdream.cookall.core.models;
 
 public class Recipe {
 
-    public final String id;
-    public final String recipeName;
-    public final String details;
+    private String id;
+    private String title;
+    private String description;
 
-    public Recipe(String id, String recipeName, String details) {
-        this.id = id;
-        this.recipeName = recipeName;
-        this.details = details;
+
+    public Recipe(String _id, String _title, String _description) {
+        id = _id;
+        title = _title;
+        description = _description;
     }
 
-    @Override
-    public String toString() {
-        return recipeName;
+    public String getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

@@ -24,7 +24,7 @@ public class DummyListContent {
 
     private static void addItem(Recipe item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.getId(), item);
     }
 
     private static Recipe createDummyItem(int position) {
