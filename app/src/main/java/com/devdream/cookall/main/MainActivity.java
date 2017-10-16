@@ -56,21 +56,6 @@ public class MainActivity extends AppCompatActivity implements
                 .add(R.id.fragment_container, favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
                 .commit();
 
-        // TODO Retrofit call example, refactor to presenter
-//        QuestionAPIService apiService = RestClient.getClient().create(QuestionAPIService.class);
-//        Call<ArrayList<Recipe>> call = apiService.fetchQuestions("android");
-//        call.enqueue(new Callback<QuestionList>() {
-//            @Override
-//            public void onResponse(Call<QuestionList> call, Response<QuestionList> response) {
-//                Log.d(TAG, "Total number of questions fetched : " + response.body().getQuestions().size());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<QuestionList> call, Throwable t) {
-//                Log.e(TAG, "Got error : " + t.getLocalizedMessage());
-//            }
-//        });
-
         mainPresenter = new MainPresenter(this);
     }
 
@@ -95,16 +80,13 @@ public class MainActivity extends AppCompatActivity implements
 
         switch (item.getItemId()) {
             case R.id.create_new_recipe:
-                Intent newRecipeIntent = new Intent(this, CreateRecipeActivity.class);
-                startActivity(newRecipeIntent);
+                startActivity(new Intent(this, CreateRecipeActivity.class));
                 return true;
             case R.id.profile:
-                Intent profileIntent = new Intent(this, UserProfileActivity.class);
-                startActivity(profileIntent);
+                startActivity(new Intent(this, UserProfileActivity.class));
                 return true;
             case R.id.settings:
-                Intent settingsIntent = new Intent(this, SettingsActivity.class);
-                startActivity(settingsIntent);
+                startActivity(new Intent(this, SettingsActivity.class));
                 return true;
         }
 
