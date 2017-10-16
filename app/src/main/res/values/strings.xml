@@ -110,5 +110,9 @@
     <string name="title_activity_user_profile">UserProfileActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+    <string name="my_recipes">My recipes</string>
+    <string name="explore">Explore</string>
 
 </resources>
