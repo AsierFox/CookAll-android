@@ -13,7 +13,7 @@ public class SignUpActivityActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up_activity);
+        setContentView(R.layout.activity_sign_up);
     }
 
     public void signUp(View view) {
