@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.MainActivity;
+import com.devdream.cookall.signup.SignUpActivityActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginListener {
 
@@ -23,6 +24,11 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
     public void login(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
+    }
+
+    public void navigateSignUp(View view) {
+        startActivity(new Intent(this, SignUpActivityActivity.class));
         finish();
     }
 

@@ -53,7 +53,7 @@
         android:theme="@style/loginButton" />
 
     <TextView
-        android:id="@+id/link_signup"
+        android:id="@+id/error_message"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -62,5 +62,15 @@
         android:textColor="@android:color/holo_red_light"
         android:textSize="16sp"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/link_signup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navigateSignUp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/no_account_create_one"
+        android:gravity="center"
+        android:textSize="12sp" />
 
 </LinearLayout>
