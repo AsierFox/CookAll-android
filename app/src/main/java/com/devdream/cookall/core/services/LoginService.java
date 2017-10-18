@@ -1,14 +1,12 @@
 package com.devdream.cookall.core.services;
 
-import android.util.Log;
-
 import com.devdream.cookall.core.api.APIRestClient;
 import com.devdream.cookall.core.api.responses.LoginAuthResponse;
 import com.devdream.cookall.core.context.AppContext;
 import com.devdream.cookall.core.dto.UserAuthDTO;
-import com.devdream.cookall.core.exceptions.AuthException;
 import com.devdream.cookall.core.services.api.LoginAPIService;
 import com.devdream.cookall.core.utils.ConnectivityUtil;
+import com.devdream.cookall.login.OnLoginFinishedListener;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -16,7 +14,7 @@ import retrofit2.Response;
 
 public class LoginService {
 
-    public void login(UserAuthDTO userDTO) throws AuthException {
+    public void login(UserAuthDTO userDTO, final OnLoginFinishedListener onLoginFinishedListener) {
 
         if (ConnectivityUtil.isConnected(AppContext.getContext())) {
 
@@ -24,28 +22,30 @@ public class LoginService {
                     .create(LoginAPIService.class);
 
             Call<LoginAuthResponse> call = loginAPIService.login(userDTO.getEmail(), userDTO.getPassword());
+            Callback<LoginAuthResponse> callback = new Callback<LoginAuthResponse>() {
 
-            try {
-                call.enqueue(new Callback<LoginAuthResponse>() {
+                @Override
+                public void onResponse(Call<LoginAuthResponse> call, Response<LoginAuthResponse> response) {
 
-                    @Override
-                    public void onResponse(Call<LoginAuthResponse> call, Response<LoginAuthResponse> response) {
-                        Log.d("MEW", "Total number of questions fetched : " + response.body());
+                    if (response.body() != null && response.body().getCode() == 200) {
+                        onLoginFinishedListener.onLoginSuccess();
                     }
-
-                    @Override
-                    public void onFailure(Call<LoginAuthResponse> call, Throwable t) {
-                        // TODO Throw exception
+                    else {
+                        onLoginFinishedListener.onLoginFailure();
                     }
-                });
-            }
-            catch (Exception err) {
-                throw new AuthException();
-            }
+                }
+
+                @Override
+                public void onFailure(Call<LoginAuthResponse> call, Throwable t) {
+                    onLoginFinishedListener.onLoginFailure();
+                }
+            };
+
+            call.enqueue(callback);
         }
         else {
-            // Realm call
+            // TODO Throw Connection exception
         }
-
     }
+
 }

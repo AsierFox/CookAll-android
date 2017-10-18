@@ -1,13 +1,10 @@
 package com.devdream.cookall.login;
 
-import android.view.View;
-
 import com.devdream.cookall.core.dto.UserAuthDTO;
-import com.devdream.cookall.core.exceptions.AuthException;
 import com.devdream.cookall.core.services.LoginService;
 
 // TODO Add listeners for login events, refactor
-public class LoginPresenter implements LoginListener {
+public class LoginPresenter implements LoginListener, OnLoginFinishedListener {
 
     private LoginActivity loginActivity;
     private LoginService loginService;
@@ -18,23 +15,26 @@ public class LoginPresenter implements LoginListener {
     }
 
     public void login(final String email, final String password) {
-        loginActivity.loadingProgressBar.setVisibility(View.VISIBLE);
-        loginActivity.loginButton.setEnabled(false);
+        startLoginProcess();
 
         UserAuthDTO userAuthDTO = new UserAuthDTO(email, password);
 
-        try {
-            loginService.login(userAuthDTO);
+        loginService.login(userAuthDTO, this);
+    }
 
-            loginActivity.navigateHome();
-        }
-        catch (AuthException e) {
-            loginActivity.showLoginError();
-        }
-        finally {
-            loginActivity.loadingProgressBar.setVisibility(View.GONE);
-            loginActivity.loginButton.setEnabled(true);
-        }
+    @Override
+    public void startLoginProcess() {
+        loginActivity.startLoginProcess();
+    }
+
+    @Override
+    public void onLoginSuccess() {
+        loginActivity.onLoginSuccess();
+    }
+
+    @Override
+    public void onLoginFailure() {
+        loginActivity.onLoginFailure();
     }
 
 }

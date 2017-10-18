@@ -13,11 +13,10 @@ import com.devdream.cookall.R;
 import com.devdream.cookall.main.MainActivity;
 import com.devdream.cookall.signup.SignUpActivityActivity;
 
-public class LoginActivity extends AppCompatActivity implements LoginListener {
+public class LoginActivity extends AppCompatActivity implements LoginListener, OnLoginFinishedListener {
 
-    protected ProgressBar loadingProgressBar;
-    protected Button loginButton;
-
+    private ProgressBar loadingProgressBar;
+    private Button loginButton;
     private EditText email;
     private EditText password;
     private TextView errorMessage;
@@ -41,10 +40,6 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
         loginPresenter.login(email.getText().toString(), password.getText().toString());
     }
 
-    public void showLoginError() {
-        errorMessage.setVisibility(View.VISIBLE);
-    }
-
     public void navigateHome() {
         startActivity(new Intent(this, MainActivity.class));
         finish();
@@ -53,6 +48,25 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
     public void navigateSignUp(View view) {
         startActivity(new Intent(this, SignUpActivityActivity.class));
         finish();
+    }
+
+    @Override
+    public void startLoginProcess() {
+        errorMessage.setVisibility(View.GONE);
+        loadingProgressBar.setVisibility(View.VISIBLE);
+        loginButton.setEnabled(false);
+    }
+
+    @Override
+    public void onLoginSuccess() {
+        navigateHome();
+    }
+
+    @Override
+    public void onLoginFailure() {
+        errorMessage.setVisibility(View.VISIBLE);
+        loadingProgressBar.setVisibility(View.GONE);
+        loginButton.setEnabled(true);
     }
 
 }
