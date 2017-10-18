@@ -7,22 +7,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.devdream.cookall.R;
+import com.devdream.cookall.core.realm.entities.RecipeRealm;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
-import com.devdream.cookall.core.entities.Recipe;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link Recipe} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link RecipeRealm} and makes a call to the
  * specified {@link FavoriteRecipesFragment.OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class RecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<RecipeItemRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Recipe> mValues;
+    private final List<RecipeRealm> mValues;
     private final FavoriteRecipesFragment.OnListFragmentInteractionListener mListener;
 
-    public RecipeItemRecyclerViewAdapter(List<Recipe> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
+    public RecipeItemRecyclerViewAdapter(List<RecipeRealm> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -59,7 +59,7 @@ public class RecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<RecipeIt
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mContentView;
-        public Recipe mItem;
+        public RecipeRealm mItem;
 
         public ViewHolder(View view) {
             super(view);

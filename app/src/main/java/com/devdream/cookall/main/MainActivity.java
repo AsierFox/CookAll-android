@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.entities.Recipe;
+import com.devdream.cookall.core.realm.entities.RecipeRealm;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.main.mine.MyRecipesFragment;
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onListFragmentInteraction(Recipe item) {
+    public void onListFragmentInteraction(RecipeRealm item) {
         Intent intent = new Intent(this, RecipeDetailActivity.class);
         startActivity(intent);
     }

@@ -1,4 +1,4 @@
-package com.devdream.cookall.core.db;
+package com.devdream.cookall.core.realm;
 
 import com.devdream.cookall.core.context.AppContext;
 import com.devdream.cookall.core.utils.Constants;

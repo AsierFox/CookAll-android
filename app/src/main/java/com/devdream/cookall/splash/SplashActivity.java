@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.db.RealmInitializer;
+import com.devdream.cookall.core.realm.RealmInitializer;
 import com.devdream.cookall.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {

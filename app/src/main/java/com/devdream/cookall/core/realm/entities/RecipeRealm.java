@@ -1,19 +1,19 @@
-package com.devdream.cookall.core.entities;
+package com.devdream.cookall.core.realm.entities;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class Recipe extends RealmObject {
+public class RecipeRealm extends RealmObject {
 
     @PrimaryKey
     private String id;
     private String title;
     private String description;
 
-    public Recipe() {
+    public RecipeRealm() {
     }
 
-    public Recipe(String _id, String _title, String _description) {
+    public RecipeRealm(String _id, String _title, String _description) {
         id = _id;
         title = _title;
         description = _description;

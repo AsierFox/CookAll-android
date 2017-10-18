@@ -11,9 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.devdream.cookall.R;
+import com.devdream.cookall.core.realm.entities.RecipeRealm;
 import com.devdream.cookall.main.RecipeItemRecyclerViewAdapter;
 import com.devdream.cookall.main.DummyListContent;
-import com.devdream.cookall.core.entities.Recipe;
 
 /**
  * A fragment representing a list of Items.
@@ -106,7 +106,7 @@ public class FavoriteRecipesFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(Recipe item);
+        void onListFragmentInteraction(RecipeRealm item);
     }
 
 }
