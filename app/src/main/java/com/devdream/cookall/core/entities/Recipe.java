@@ -1,11 +1,17 @@
-package com.devdream.cookall.core.models;
+package com.devdream.cookall.core.entities;
 
-public class Recipe {
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
+public class Recipe extends RealmObject {
+
+    @PrimaryKey
     private String id;
     private String title;
     private String description;
 
+    public Recipe() {
+    }
 
     public Recipe(String _id, String _title, String _description) {
         id = _id;

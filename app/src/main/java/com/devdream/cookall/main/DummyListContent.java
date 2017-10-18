@@ -1,6 +1,6 @@
 package com.devdream.cookall.main;
 
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 
 import java.util.ArrayList;
 import java.util.HashMap;

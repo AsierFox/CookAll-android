@@ -1,6 +1,6 @@
 package com.devdream.cookall.core.services.api;
 
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 
 import java.util.List;
 

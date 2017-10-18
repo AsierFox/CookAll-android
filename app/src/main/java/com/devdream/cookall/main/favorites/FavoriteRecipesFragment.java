@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.RecipeItemRecyclerViewAdapter;
 import com.devdream.cookall.main.DummyListContent;
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 
 /**
  * A fragment representing a list of Items.

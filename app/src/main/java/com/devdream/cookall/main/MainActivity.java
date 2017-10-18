@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.main.mine.MyRecipesFragment;

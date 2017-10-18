@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 
 import java.util.List;
 

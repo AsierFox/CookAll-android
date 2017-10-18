@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.main.MainActivity;
@@ -12,8 +15,12 @@ import com.devdream.cookall.signup.SignUpActivityActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginListener {
 
-    private ProgressBar loadingProgressBar;
+    protected ProgressBar loadingProgressBar;
+    protected Button loginButton;
 
+    private EditText email;
+    private EditText password;
+    private TextView errorMessage;
     private LoginPresenter loginPresenter;
 
     @Override
@@ -21,18 +28,25 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loadingProgressBar = (ProgressBar) findViewById(R.id.login_progress);
+        email = (EditText) findViewById(R.id.email_editText);
+        password = (EditText) findViewById(R.id.password_editText);
+        errorMessage = (TextView) findViewById(R.id.error_message);
+        loadingProgressBar = (ProgressBar) findViewById(R.id.loading_progress_bar);
+        loginButton = (Button) findViewById(R.id.login_button);
 
         loginPresenter = new LoginPresenter(this);
     }
 
     public void login(View view) {
-        loadingProgressBar.setVisibility(View.VISIBLE);
+        loginPresenter.login(email.getText().toString(), password.getText().toString());
+    }
 
-        //loadingProgressBar.setVisibility(View.GONE);
+    public void showLoginError() {
+        errorMessage.setVisibility(View.VISIBLE);
+    }
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    public void navigateHome() {
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 

@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.devdream.cookall.core.api.APIRestClient;
 import com.devdream.cookall.core.context.AppContext;
-import com.devdream.cookall.core.models.Recipe;
+import com.devdream.cookall.core.entities.Recipe;
 import com.devdream.cookall.core.services.api.RecipeAPIService;
 import com.devdream.cookall.core.utils.ConnectivityUtil;
 
