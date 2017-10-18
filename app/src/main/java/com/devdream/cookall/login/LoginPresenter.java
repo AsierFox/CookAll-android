@@ -3,7 +3,6 @@ package com.devdream.cookall.login;
 import com.devdream.cookall.core.dto.UserAuthDTO;
 import com.devdream.cookall.core.services.LoginService;
 
-// TODO Add listeners for login events, refactor
 public class LoginPresenter implements LoginListener, OnLoginFinishedListener {
 
     private LoginActivity loginActivity;
