@@ -8,11 +8,7 @@ import com.devdream.cookall.R;
 import com.devdream.cookall.core.db.RealmInitializer;
 import com.devdream.cookall.login.LoginActivity;
 
-import io.realm.Realm;
-
 public class SplashActivity extends AppCompatActivity {
-
-    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
