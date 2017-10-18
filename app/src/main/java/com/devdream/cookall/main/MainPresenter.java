@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.devdream.cookall.core.api.APIRestClient;
 import com.devdream.cookall.core.models.Recipe;
-import com.devdream.cookall.core.services.RecipeAPIService;
+import com.devdream.cookall.core.services.api.RecipeAPIService;
 
 import java.util.List;
 
