@@ -18,7 +18,7 @@ public class RecipeService {
 
     public List<Recipe> getAllRecipes() {
 
-        if (ConnectivityUtil.isConnected(AppContext.getContext())) {
+        if (ConnectivityUtil.isConnected(AppContext.context)) {
 
             RecipeAPIService recipeAPIService = APIRestClient.getClient()
                     .create(RecipeAPIService.class);

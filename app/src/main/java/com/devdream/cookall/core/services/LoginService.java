@@ -16,7 +16,7 @@ public class LoginService {
 
     public void login(UserAuthDTO userDTO, final OnLoginFinishedListener onLoginFinishedListener) {
 
-        if (ConnectivityUtil.isConnected(AppContext.getContext())) {
+        if (ConnectivityUtil.isConnected(AppContext.context)) {
 
             LoginAPIService loginAPIService = APIRestClient.getClient()
                     .create(LoginAPIService.class);
