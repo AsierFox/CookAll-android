@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.core.dto.LoginAuthDTO;
@@ -52,11 +53,20 @@ public class LoginActivity extends AppCompatActivity implements LoginListener, N
         finish();
     }
 
-    @Override
-    public void startLoginProcess() {
+    private void enableLogin() {
         errorMessage.setVisibility(View.GONE);
         loadingProgressBar.setVisibility(View.VISIBLE);
         loginButton.setEnabled(false);
+    }
+
+    private void disableLogin() {
+        loadingProgressBar.setVisibility(View.GONE);
+        loginButton.setEnabled(true);
+    }
+
+    @Override
+    public void startLoginProcess() {
+        enableLogin();
     }
 
     @Override
@@ -67,13 +77,13 @@ public class LoginActivity extends AppCompatActivity implements LoginListener, N
     @Override
     public void errorLoginProcess() {
         errorMessage.setVisibility(View.VISIBLE);
-        loadingProgressBar.setVisibility(View.GONE);
-        loginButton.setEnabled(true);
+        disableLogin();
     }
 
     @Override
     public void noNetworkAccessError() {
-        
+        disableLogin();
+        Toast.makeText(this, "You don't have internet connection!", Toast.LENGTH_SHORT).show();
     }
 
 }

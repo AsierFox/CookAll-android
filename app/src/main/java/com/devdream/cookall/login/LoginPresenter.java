@@ -4,8 +4,9 @@ import com.devdream.cookall.core.dto.LoginAuthDTO;
 import com.devdream.cookall.core.dto.UserAuthDTO;
 import com.devdream.cookall.core.exceptions.NoNetworkAccessException;
 import com.devdream.cookall.core.interceptors.LoginInteractor;
+import com.devdream.cookall.core.listeners.NetworkListener;
 
-public class LoginPresenter implements LoginListener, OnLoginFinishedListener {
+public class LoginPresenter implements LoginListener, NetworkListener, OnLoginFinishedListener {
 
     private LoginActivity loginActivity;
     private LoginInteractor loginInterator;
@@ -24,7 +25,7 @@ public class LoginPresenter implements LoginListener, OnLoginFinishedListener {
             loginInterator.login(userAuthDTO, this);
         }
         catch (NoNetworkAccessException e) {
-            // TODO Call error listener exception
+            noNetworkAccessError();
         }
     }
 
@@ -53,4 +54,8 @@ public class LoginPresenter implements LoginListener, OnLoginFinishedListener {
         errorLoginProcess();
     }
 
+    @Override
+    public void noNetworkAccessError() {
+        loginActivity.noNetworkAccessError();
+    }
 }
