@@ -3,18 +3,18 @@ package com.devdream.cookall.main;
 import android.view.View;
 import android.widget.Toast;
 
-import com.devdream.cookall.core.services.RecipeService;
+import com.devdream.cookall.core.interceptors.RecipeInteractor;
 
 public class MainPresenter implements MainListener {
 
     private MainActivity mainActivity;
 
-    private RecipeService recipeService;
+    private RecipeInteractor recipeInteractor;
 
     public MainPresenter(MainActivity _mainActivity) {
         mainActivity = _mainActivity;
-        recipeService = new RecipeService();
-        recipeService.getAllRecipes();
+        recipeInteractor = new RecipeInteractor();
+        recipeInteractor.getAllRecipes();
     }
 
     @Override

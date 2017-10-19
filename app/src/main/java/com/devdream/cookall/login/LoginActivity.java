@@ -10,10 +10,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.devdream.cookall.R;
+import com.devdream.cookall.core.dto.LoginAuthDTO;
+import com.devdream.cookall.core.listeners.NetworkListener;
 import com.devdream.cookall.main.MainActivity;
 import com.devdream.cookall.signup.SignUpActivityActivity;
 
-public class LoginActivity extends AppCompatActivity implements LoginListener, OnLoginFinishedListener {
+public class LoginActivity extends AppCompatActivity implements LoginListener, NetworkListener {
 
     private ProgressBar loadingProgressBar;
     private Button loginButton;
@@ -58,15 +60,20 @@ public class LoginActivity extends AppCompatActivity implements LoginListener, O
     }
 
     @Override
-    public void onLoginSuccess() {
+    public void successLoginProcess() {
         navigateHome();
     }
 
     @Override
-    public void onLoginFailure() {
+    public void errorLoginProcess() {
         errorMessage.setVisibility(View.VISIBLE);
         loadingProgressBar.setVisibility(View.GONE);
         loginButton.setEnabled(true);
+    }
+
+    @Override
+    public void noNetworkAccessError() {
+        
     }
 
 }
