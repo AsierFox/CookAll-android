@@ -66,7 +66,8 @@
             android:text="@string/already_a_member_login"
             android:gravity="center"
             android:onClick="navigateLogin"
-            android:textSize="12sp"/>
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 

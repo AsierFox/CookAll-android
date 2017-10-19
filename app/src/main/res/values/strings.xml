@@ -17,7 +17,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="error_incorrect_credentials">Those credentials are not correct</string>
+    <string name="error_incorrect_credentials">Those credentials are not correct!</string>
     <string name="title_activity_main">CookAll</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -122,5 +122,6 @@
     <string name="create_account">Create Account</string>
     <string name="sign_up">Sign up</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="logout">Logout</string>
 
 </resources>
