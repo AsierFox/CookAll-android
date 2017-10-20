@@ -1,4 +1,4 @@
-package com.devdream.cookall.main;
+package com.devdream.cookall.main.favorites;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,21 +8,17 @@ import android.widget.TextView;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.core.realm.entities.RecipeRealm;
-import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link RecipeRealm} and makes a call to the
- * specified {@link FavoriteRecipesFragment.OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
-public class RecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<RecipeItemRecyclerViewAdapter.ViewHolder> {
+public class FavoriteRecipesRecyclerViewAdapter
+        extends RecyclerView.Adapter<FavoriteRecipesRecyclerViewAdapter.ViewHolder> {
 
     private final List<RecipeRealm> mValues;
     private final FavoriteRecipesFragment.OnListFragmentInteractionListener mListener;
 
-    public RecipeItemRecyclerViewAdapter(List<RecipeRealm> items, FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
+    public FavoriteRecipesRecyclerViewAdapter(List<RecipeRealm> items,
+                                              FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }

@@ -22,7 +22,7 @@ import com.devdream.cookall.settings.SettingsActivity;
 public class MainActivity extends AppCompatActivity implements
         MainListener,
         FavoriteRecipesFragment.OnListFragmentInteractionListener,
-        ExploreRecipesFragment.OnFragmentInteractionListener,
+        ExploreRecipesFragment.OnListFragmentInteractionListener,
         MyRecipesFragment.OnFragmentInteractionListener {
 
     private BottomNavigationView bottomNavigationView;

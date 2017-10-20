@@ -1,13 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/explore_recipes_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.devdream.cookall.main.explore.ExploreRecipesFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Explore recipes!" />
-
-</FrameLayout>
+    app:layoutManager="LinearLayoutManager"
+    tools:context="com.devdream.cookall.main.explore.ExploreRecipesFragment"
+    tools:listitem="@layout/fragment_recipe_list_item"
+    android:choiceMode="singleChoice" />
