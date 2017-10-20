@@ -9,5 +9,5 @@
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
     tools:context="com.devdream.cookall.main.favorites.FavoriteRecipesFragment"
-    tools:listitem="@layout/fragment_favorite_recipe_list_item"
+    tools:listitem="@layout/fragment_recipe_list_item"
     android:choiceMode="singleChoice" />

@@ -30,7 +30,7 @@ public class RecipeItemRecyclerViewAdapter extends RecyclerView.Adapter<RecipeIt
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_favorite_recipe_list_item, parent, false);
+                .inflate(R.layout.fragment_recipe_list_item, parent, false);
         return new ViewHolder(view);
     }
 
