@@ -1,8 +1,11 @@
 package com.devdream.cookall.core.listeners;
 
-/**
- * Created by SkyFoXx on 20/10/2017.
- */
+import com.devdream.cookall.core.dto.RecipeDTO;
 
-public class OnRecipeFetchedListener {
+import java.util.List;
+
+public interface OnRecipeFetchedListener {
+
+    void onGetAllRecipesSuccess(List<RecipeDTO> recipes);
+
 }

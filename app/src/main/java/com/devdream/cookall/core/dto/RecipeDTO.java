@@ -1,8 +1,17 @@
 package com.devdream.cookall.core.dto;
 
-/**
- * Created by SkyFoXx on 20/10/2017.
- */
+import java.util.Date;
 
 public class RecipeDTO {
+
+    public long id;
+    public long profileId;
+    public String title;
+    public String description;
+    public String cookingTime;
+    public float calories;
+    public long likes;
+    public long favorites;
+    public Date createdAt;
+
 }

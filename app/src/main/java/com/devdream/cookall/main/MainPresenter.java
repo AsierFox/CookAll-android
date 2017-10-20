@@ -14,7 +14,6 @@ public class MainPresenter implements MainListener {
     public MainPresenter(MainActivity _mainActivity) {
         mainActivity = _mainActivity;
         recipeInteractor = new RecipeInteractor();
-        recipeInteractor.getAllRecipes();
     }
 
     @Override

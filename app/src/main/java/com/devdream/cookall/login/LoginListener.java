@@ -1,6 +1,8 @@
 package com.devdream.cookall.login;
 
-interface LoginListener {
+import com.devdream.cookall.core.listeners.NetworkListener;
+
+interface LoginListener extends NetworkListener {
 
     void startLoginProcess();
     void successLoginProcess();

@@ -4,44 +4,44 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.realm.entities.RecipeRealm;
+import com.devdream.cookall.core.dto.RecipeDTO;
+import com.devdream.cookall.main.RecipeViewHolder;
 
 import java.util.List;
 
-public class FavoriteRecipesRecyclerViewAdapter
-        extends RecyclerView.Adapter<FavoriteRecipesRecyclerViewAdapter.ViewHolder> {
+public class FavoriteRecipesRecyclerViewAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
 
-    private final List<RecipeRealm> mValues;
+    private final List<RecipeDTO> recipes;
     private final FavoriteRecipesFragment.OnListFragmentInteractionListener mListener;
 
-    public FavoriteRecipesRecyclerViewAdapter(List<RecipeRealm> items,
+    public FavoriteRecipesRecyclerViewAdapter(List<RecipeDTO> _recipes,
                                               FavoriteRecipesFragment.OnListFragmentInteractionListener listener) {
-        mValues = items;
+        recipes = _recipes;
         mListener = listener;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecipeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_recipe_list_item, parent, false);
-        return new ViewHolder(view);
+        return new RecipeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mContentView.setText(mValues.get(position).getTitle());
+    public void onBindViewHolder(final RecipeViewHolder holder, int position) {
+        holder.recipe = recipes.get(position);
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.titleTextView.setText(recipes.get(position).title);
+
+        holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onListFragmentInteraction(holder.recipe);
                 }
             }
         });
@@ -49,24 +49,7 @@ public class FavoriteRecipesRecyclerViewAdapter
 
     @Override
     public int getItemCount() {
-        return mValues.size();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mContentView;
-        public RecipeRealm mItem;
-
-        public ViewHolder(View view) {
-            super(view);
-            mView = view;
-            mContentView = (TextView) view.findViewById(R.id.recipe_name);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
-        }
+        return recipes.size();
     }
 
 }

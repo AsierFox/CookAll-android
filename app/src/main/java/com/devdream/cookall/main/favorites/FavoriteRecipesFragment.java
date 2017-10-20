@@ -3,7 +3,6 @@ package com.devdream.cookall.main.favorites;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.realm.entities.RecipeRealm;
+import com.devdream.cookall.core.dto.RecipeDTO;
 import com.devdream.cookall.main.DummyListContent;
 
 /**
@@ -26,8 +25,7 @@ public class FavoriteRecipesFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 1;
+
     private OnListFragmentInteractionListener mListener;
 
     /**
@@ -50,10 +48,10 @@ public class FavoriteRecipesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
+        // Get arguments
+//        if (getArguments() != null) {
+//            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+//        }
     }
 
     @Override
@@ -65,11 +63,9 @@ public class FavoriteRecipesFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
+
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
             recyclerView.setAdapter(new FavoriteRecipesRecyclerViewAdapter(DummyListContent.ITEMS, mListener));
         }
         return view;
@@ -95,7 +91,7 @@ public class FavoriteRecipesFragment extends Fragment {
 
     public interface OnListFragmentInteractionListener {
 
-        void onListFragmentInteraction(RecipeRealm item);
+        void onListFragmentInteraction(RecipeDTO item);
 
     }
 

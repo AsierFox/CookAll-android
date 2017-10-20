@@ -11,12 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.devdream.cookall.R;
-import com.devdream.cookall.core.dto.LoginAuthDTO;
-import com.devdream.cookall.core.listeners.NetworkListener;
 import com.devdream.cookall.main.MainActivity;
 import com.devdream.cookall.signup.SignUpActivityActivity;
 
-public class LoginActivity extends AppCompatActivity implements LoginListener, NetworkListener {
+public class LoginActivity extends AppCompatActivity implements LoginListener {
 
     private ProgressBar loadingProgressBar;
     private Button loginButton;
@@ -66,7 +64,12 @@ public class LoginActivity extends AppCompatActivity implements LoginListener, N
 
     @Override
     public void startLoginProcess() {
-        enableLogin();
+        boolean skipLogin = true;
+        if (skipLogin) {
+            navigateHome();
+        } else {
+            enableLogin();
+        }
     }
 
     @Override

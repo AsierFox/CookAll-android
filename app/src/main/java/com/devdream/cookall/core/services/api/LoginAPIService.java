@@ -4,7 +4,7 @@ import com.devdream.cookall.core.api.APIRestClient;
 import com.devdream.cookall.core.api.responses.LoginAuthResponse;
 import com.devdream.cookall.core.dto.LoginAuthDTO;
 import com.devdream.cookall.core.dto.UserAuthDTO;
-import com.devdream.cookall.login.OnLoginFinishedListener;
+import com.devdream.cookall.core.listeners.OnLoginFetchedListener;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -12,12 +12,12 @@ import retrofit2.Response;
 
 public class LoginAPIService {
 
-    public void login(UserAuthDTO userDTO, final OnLoginFinishedListener onLoginFinishedListener) {
+    public void login(UserAuthDTO userDTO, final OnLoginFetchedListener onLoginFinishedListener) {
 
         LoginRetrofitService loginAPIService = APIRestClient.getClient()
                 .create(LoginRetrofitService.class);
 
-        Call<LoginAuthResponse> call = loginAPIService.login(userDTO.getEmail(), userDTO.getPassword());
+        Call<LoginAuthResponse> call = loginAPIService.login(userDTO.email, userDTO.password);
         Callback<LoginAuthResponse> callback = new Callback<LoginAuthResponse>() {
 
             @Override

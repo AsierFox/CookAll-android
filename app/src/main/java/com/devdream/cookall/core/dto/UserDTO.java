@@ -1,8 +1,10 @@
 package com.devdream.cookall.core.dto;
 
-/**
- * Created by SkyFoXx on 20/10/2017.
- */
-
 public class UserDTO {
+
+    public Long id;
+    public String username;
+    public String name;
+    public String email;
+
 }

@@ -5,7 +5,7 @@ import com.devdream.cookall.core.utils.Constants;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class APIRestClient {
+public abstract class APIRestClient {
 
     private static Retrofit retrofit = null;
 

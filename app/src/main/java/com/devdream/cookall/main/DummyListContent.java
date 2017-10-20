@@ -1,6 +1,6 @@
 package com.devdream.cookall.main;
 
-import com.devdream.cookall.core.realm.entities.RecipeRealm;
+import com.devdream.cookall.core.dto.RecipeDTO;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,9 +9,9 @@ import java.util.Map;
 
 public class DummyListContent {
 
-    public static final List<RecipeRealm> ITEMS = new ArrayList<RecipeRealm>();
+    public static final List<RecipeDTO> ITEMS = new ArrayList<RecipeDTO>();
 
-    public static final Map<String, RecipeRealm> ITEM_MAP = new HashMap<String, RecipeRealm>();
+    public static final Map<Long, RecipeDTO> ITEM_MAP = new HashMap<Long, RecipeDTO>();
 
     private static final int COUNT = 10;
 
@@ -22,13 +22,16 @@ public class DummyListContent {
         }
     }
 
-    private static void addItem(RecipeRealm item) {
-        ITEMS.add(item);
-        ITEM_MAP.put(item.getId(), item);
+    private static void addItem(RecipeDTO recipe) {
+        ITEMS.add(recipe);
+        ITEM_MAP.put(recipe.id, recipe);
     }
 
-    private static RecipeRealm createDummyItem(int position) {
-        return new RecipeRealm(String.valueOf(position), "Item " + position, makeDetails(position));
+    private static RecipeDTO createDummyItem(int position) {
+        RecipeDTO recipe = new RecipeDTO();
+        recipe.id = position;
+        recipe.title = makeDetails(position);
+        return recipe;
     }
 
     private static String makeDetails(int position) {

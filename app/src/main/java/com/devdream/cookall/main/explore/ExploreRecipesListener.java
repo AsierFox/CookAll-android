@@ -1,8 +1,11 @@
 package com.devdream.cookall.main.explore;
 
-/**
- * Created by SkyFoXx on 20/10/2017.
- */
+import com.devdream.cookall.core.dto.RecipeDTO;
 
-public interface ExploreRecipesListener {
+import java.util.List;
+
+interface ExploreRecipesListener {
+
+    void recipesLoaded(List<RecipeDTO> recipes);
+
 }

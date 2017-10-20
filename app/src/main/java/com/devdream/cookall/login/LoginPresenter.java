@@ -4,22 +4,22 @@ import com.devdream.cookall.core.dto.LoginAuthDTO;
 import com.devdream.cookall.core.dto.UserAuthDTO;
 import com.devdream.cookall.core.exceptions.NoNetworkAccessException;
 import com.devdream.cookall.core.interceptors.LoginInteractor;
-import com.devdream.cookall.core.listeners.NetworkListener;
+import com.devdream.cookall.core.listeners.OnLoginFetchedListener;
 
-public class LoginPresenter implements LoginListener, NetworkListener, OnLoginFinishedListener {
+public class LoginPresenter implements LoginListener, OnLoginFetchedListener {
 
-    private LoginActivity loginActivity;
+    private LoginListener loginListener;
     private LoginInteractor loginInterator;
 
-    public LoginPresenter(LoginActivity _loginActivity) {
-        loginActivity = _loginActivity;
+    public LoginPresenter(LoginListener _loginListener) {
+        loginListener = _loginListener;
         loginInterator = new LoginInteractor();
     }
 
     public void login(final String email, final String password) {
         startLoginProcess();
 
-        UserAuthDTO userAuthDTO = new UserAuthDTO(email, password);
+        UserAuthDTO userAuthDTO = new UserAuthDTO();
 
         try {
             loginInterator.login(userAuthDTO, this);
@@ -31,17 +31,17 @@ public class LoginPresenter implements LoginListener, NetworkListener, OnLoginFi
 
     @Override
     public void startLoginProcess() {
-        loginActivity.startLoginProcess();
+        loginListener.startLoginProcess();
     }
 
     @Override
     public void successLoginProcess() {
-        loginActivity.successLoginProcess();
+        loginListener.successLoginProcess();
     }
 
     @Override
     public void errorLoginProcess() {
-        loginActivity.errorLoginProcess();
+        loginListener.errorLoginProcess();
     }
 
     @Override
@@ -56,6 +56,7 @@ public class LoginPresenter implements LoginListener, NetworkListener, OnLoginFi
 
     @Override
     public void noNetworkAccessError() {
-        loginActivity.noNetworkAccessError();
+        loginListener.noNetworkAccessError();
     }
+
 }

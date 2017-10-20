@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.devdream.cookall.R;
+import com.devdream.cookall.core.dto.RecipeDTO;
 
 /**
  * Generic ViewHolder for main fragments recipe lists.
@@ -14,16 +15,17 @@ import com.devdream.cookall.R;
  */
 public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
-    public final View mView;
-    public final TextView mContentView;
+    public final View view;
 
-    // TODO Set here RecipeDTO
+    public RecipeDTO recipe;
 
-    public RecipeViewHolder(View view) {
-        super(view);
-        mView = view;
+    public final TextView titleTextView;
+
+    public RecipeViewHolder(View _view) {
+        super(_view);
+        view = _view;
         // Component binding
-        mContentView = (TextView) view.findViewById(R.id.recipe_name);
+        titleTextView = (TextView) view.findViewById(R.id.recipe_title);
     }
 
 }
