@@ -52,6 +52,14 @@
         <activity
             android:name=".signup.SignUpActivityActivity"
             android:label="@string/sign_up" />
+        <activity
+            android:name=".feedback.FeedbackActivity"
+            android:label="@string/feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".test.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

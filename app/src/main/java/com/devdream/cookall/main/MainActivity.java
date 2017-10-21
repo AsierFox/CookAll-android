@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.core.dto.RecipeDTO;
+import com.devdream.cookall.login.LoginActivity;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.main.mine.MyRecipesFragment;
@@ -18,6 +19,7 @@ import com.devdream.cookall.profile.UserProfileActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 import com.devdream.cookall.settings.SettingsActivity;
+import com.devdream.cookall.test.TestActivity;
 
 public class MainActivity extends AppCompatActivity implements
         MainListener,
@@ -109,6 +111,15 @@ public class MainActivity extends AppCompatActivity implements
 
     private void disableBackButton() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    public void logout(MenuItem item) {
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
+    }
+
+    public void test(MenuItem item) {
+        startActivity(new Intent(this, TestActivity.class));
     }
 
 }

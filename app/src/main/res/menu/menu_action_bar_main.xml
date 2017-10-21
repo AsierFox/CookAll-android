@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.devdream.cookall.main.MainActivity">
 
+    <!-- TODO Change action to onClicks -->
     <item
         android:id="@+id/create_new_recipe"
         app:showAsAction="always"
@@ -20,7 +21,15 @@
         android:title="@string/action_settings" />
 
     <item
-        android:id="@+id/logout"
-        android:title="@string/logout" />
+        android:title="@string/logout"
+        android:onClick="logout" />
+
+    <item
+        android:id="@+id/feedback"
+        android:title="@string/feedback" />
+
+    <item
+        android:title="Test"
+        android:onClick="test" />
 
 </menu>
