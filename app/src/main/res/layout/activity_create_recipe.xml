@@ -29,7 +29,6 @@
         android:fitsSystemWindows="true"
         android:breakStrategy="balanced"
         android:inputType="textMultiLine"
-        android:singleLine="false"
         android:padding="5dp" />
 
     <EditText

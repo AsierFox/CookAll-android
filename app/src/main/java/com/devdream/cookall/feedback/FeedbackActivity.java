@@ -3,6 +3,7 @@ package com.devdream.cookall.feedback;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.devdream.cookall.R;
 
@@ -14,6 +15,9 @@ public class FeedbackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_feedback);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
+
+    public void sendFeedback(View view) {
     }
 
 }

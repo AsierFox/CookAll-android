@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.devdream.cookall.R;
 import com.devdream.cookall.core.dto.RecipeDTO;
+import com.devdream.cookall.feedback.FeedbackActivity;
 import com.devdream.cookall.login.LoginActivity;
 import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
@@ -122,4 +123,7 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(this, TestActivity.class));
     }
 
+    public void navigateFeedback(MenuItem item) {
+        startActivity(new Intent(this, FeedbackActivity.class));
+    }
 }

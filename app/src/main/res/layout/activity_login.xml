@@ -21,25 +21,39 @@
         android:background="@drawable/app_logo_white"
         android:contentDescription="@string/app_logo" />
 
-    <EditText
-        android:id="@+id/email_editText"
+    <android.support.design.widget.TextInputLayout
+        android:textColorHint="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/secondaryTextColor"
-        android:textColor="@color/secondaryTextColor"
-        android:backgroundTint="@color/white"
-        android:hint="@string/email" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/password_editText"
+        <EditText
+            android:id="@+id/email_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/secondaryTextColor"
+            android:textColor="@color/secondaryTextColor"
+            android:backgroundTint="@color/white"
+            android:hint="@string/email" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:textColorHint="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:textColorHint="@color/secondaryTextColor"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/secondaryTextColor"
-        android:hint="@string/password" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColorHint="@color/secondaryTextColor"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/secondaryTextColor"
+            android:hint="@string/password" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/loading_progress_bar"
