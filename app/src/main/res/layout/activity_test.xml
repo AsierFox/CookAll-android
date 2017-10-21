@@ -20,4 +20,18 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Test simple notification"
+        android:onClick="testSimpleNotification"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="Test custom notification"
+        android:onClick="testCustomNotification"/>
+
 </android.support.design.widget.CoordinatorLayout>

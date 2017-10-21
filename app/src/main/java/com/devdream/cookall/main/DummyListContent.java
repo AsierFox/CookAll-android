@@ -30,17 +30,8 @@ public class DummyListContent {
     private static RecipeDTO createDummyItem(int position) {
         RecipeDTO recipe = new RecipeDTO();
         recipe.id = position;
-        recipe.title = makeDetails(position);
+        recipe.title = "Details about Item: " + position;
         return recipe;
-    }
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
     }
 
 }
