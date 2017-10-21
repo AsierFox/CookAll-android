@@ -59,7 +59,10 @@
         <activity
             android:name=".test.TestActivity"
             android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <service
+            android:enabled="true"
+            android:name="com.devdream.cookall.test.NotificationIntentService" />
     </application>
 
 </manifest>
