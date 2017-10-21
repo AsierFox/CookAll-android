@@ -35,6 +35,9 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.devdream.cookall.main.MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_recipes" />
         </activity>
         <activity
             android:name=".recipe.create.CreateRecipeActivity"

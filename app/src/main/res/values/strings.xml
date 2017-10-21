@@ -126,5 +126,6 @@
     <string name="feedback">Feedback</string>
     <string name="title_activity_feedback">FeedbackActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="search_recipes">Search recipes</string>
 
 </resources>

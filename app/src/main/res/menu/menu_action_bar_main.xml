@@ -5,12 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.devdream.cookall.main.MainActivity">
 
+    <item
+        android:id="@+id/search_recipes"
+        android:title="@string/search_recipes"
+        android:icon="@drawable/ic_search_24dp"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
     <!-- TODO Change action to onClicks -->
     <item
         android:id="@+id/create_new_recipe"
         app:showAsAction="always"
         android:title="@string/create_a_recipe"
-        android:icon="@drawable/app_logo" />
+        android:icon="@drawable/ic_add_circle_white_24dp" />
 
     <item
         android:id="@+id/profile"
