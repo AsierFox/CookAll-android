@@ -64,8 +64,16 @@
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
         <service
-            android:enabled="true"
-            android:name="com.devdream.cookall.test.NotificationIntentService" />
+            android:name=".test.NotificationIntentService"
+            android:enabled="true" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chat.detail.ChatDetailActivity"
+            android:label="@string/title_activity_chat_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

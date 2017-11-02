@@ -131,5 +131,7 @@
         have any idea, suggestion or improvement, or if you have experimented some problem with
         our app. Let us know.</string>
     <string name="thanks_for_using">Thank you so much for using CookAll :)</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_chat_detail">ChatDetailActivity</string>
 
 </resources>
