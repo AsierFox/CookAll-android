@@ -68,7 +68,6 @@ public class RecipeDetailActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
     }
 
     @Override

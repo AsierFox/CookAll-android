@@ -127,5 +127,9 @@
     <string name="title_activity_feedback">FeedbackActivity</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="search_recipes">Search recipes</string>
+    <string name="feedback_information">We would love to hear from you if you like our app, if you
+        have any idea, suggestion or improvement, or if you have experimented some problem with
+        our app. Let us know.</string>
+    <string name="thanks_for_using">Thank you so much for using CookAll :)</string>
 
 </resources>
