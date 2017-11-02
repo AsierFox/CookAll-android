@@ -34,4 +34,11 @@
         android:text="Test custom notification"
         android:onClick="testCustomNotification"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Go to chat"
+        android:onClick="navigateChat"/>
+
 </android.support.design.widget.CoordinatorLayout>
