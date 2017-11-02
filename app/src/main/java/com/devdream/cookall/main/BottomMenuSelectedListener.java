@@ -3,7 +3,7 @@ package com.devdream.cookall.main;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
+import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
 import com.devdream.cookall.R;
@@ -24,59 +24,50 @@ public class BottomMenuSelectedListener implements BottomNavigationView.OnNaviga
 
         final FragmentManager fragmentManager = mainActivity.getSupportFragmentManager();
 
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
         // Refactor to method
         switch (item.getItemId()) {
             case R.id.favorite_recipes_list:
                 if (fragmentManager.findFragmentByTag(FavoriteRecipesFragment.TAG) == null) {
-                    fragmentManager
-                            .beginTransaction()
-                            .add(R.id.fragment_container,
-                                    mainActivity.favoriteRecipesFragment,
-                                    FavoriteRecipesFragment.TAG)
-                            .commit();
+                    transaction.add(R.id.fragment_container,
+                            mainActivity.favoriteRecipesFragment,
+                            FavoriteRecipesFragment.TAG);
                 }
 
-                fragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragment_container,
-                                mainActivity.favoriteRecipesFragment)
-                        .commit();
+                transaction.replace(R.id.fragment_container, mainActivity.favoriteRecipesFragment);
+
+                transaction.addToBackStack(null);
+                transaction.commit();
+
                 return true;
             case R.id.navigation_dashboard:
                 if (fragmentManager.findFragmentByTag(ExploreRecipesFragment.TAG) == null) {
-                    fragmentManager
-                            .beginTransaction()
-                            .add(R.id.fragment_container,
-                                    mainActivity.exploreRecipesFragment,
-                                    ExploreRecipesFragment.TAG)
-                            .commit();
+                    transaction.add(R.id.fragment_container,
+                            mainActivity.exploreRecipesFragment,
+                            ExploreRecipesFragment.TAG);
                 }
 
-                fragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragment_container,
-                                mainActivity.exploreRecipesFragment)
-                        .commit();
+                transaction.replace(R.id.fragment_container, mainActivity.exploreRecipesFragment);
+
+                transaction.addToBackStack(null);
+                transaction.commit();
+
                 return true;
             case R.id.navigation_notifications:
                 if (fragmentManager.findFragmentByTag(MyRecipesFragment.TAG) == null) {
-                    fragmentManager
-                            .beginTransaction()
-                            .add(R.id.fragment_container,
-                                    mainActivity.myRecipesFragment,
-                                    MyRecipesFragment.TAG)
-                            .commit();
+                    transaction.add(R.id.fragment_container,
+                            mainActivity.myRecipesFragment,
+                            MyRecipesFragment.TAG);
                 }
 
-                fragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragment_container,
-                                mainActivity.myRecipesFragment)
-                        .commit();
+                transaction.replace(R.id.fragment_container, mainActivity.myRecipesFragment);
+
+                transaction.addToBackStack(null);
+                transaction.commit();
+
                 return true;
         }
-
-//        fragmentTransaction.disallowAddToBackStack();
 
         return false;
     }
