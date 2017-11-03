@@ -88,6 +88,14 @@
         android:textColor="#a7a7a7"
         android:text="3 Comments" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b3c0c0c0"
+        android:layout_below="@+id/recipe_comments"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_marginTop="8dp" />
+
     <ImageButton
         android:id="@+id/share_recipe"
         android:layout_width="wrap_content"
