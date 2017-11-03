@@ -13,13 +13,16 @@ import com.devdream.cookall.core.dto.ChatUserDTO;
 import com.squareup.picasso.Picasso;
 import com.stfalcon.chatkit.commons.ImageLoader;
 import com.stfalcon.chatkit.dialogs.DialogsList;
-import com.stfalcon.chatkit.dialogs.DialogsListAdapter;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ChatActivity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity
+        implements DialogsListAdapter.OnDialogClickListener<ChatDTO>,
+        DialogsListAdapter.OnDialogLongClickListener<ChatDTO> {
+
+    private DialogsListAdapter dialogsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +34,14 @@ public class ChatActivity extends AppCompatActivity {
 
         DialogsList dialogsList = (DialogsList) findViewById(R.id.dialogs_list);
 
-        DialogsListAdapter dialogsListAdapter = new DialogsListAdapter<>(R.layout.activity_chat,
-                new ImageLoader() {
+        ImageLoader imageLoader = new ImageLoader() {
             @Override
             public void loadImage(ImageView imageView, String url) {
                 Picasso.with(AppContext.context).load(url).into(imageView);
             }
-        });
+        };
 
-        dialogsList.setAdapter(dialogsListAdapter);
+        dialogsAdapter = new DialogsListAdapter(imageLoader);
 
         List<ChatDTO> chats = new ArrayList<>();
 
@@ -66,7 +68,18 @@ public class ChatActivity extends AppCompatActivity {
         chat1.lastMessage = chatMessage1;
         chat1.unreadMessagesCount = 1;
 
-        dialogsListAdapter.setItems(chats);
+        dialogsList.setAdapter(dialogsAdapter);
+
+        dialogsAdapter.setItems(chats);
     }
 
+    @Override
+    public void onDialogClick(ChatDTO dialog) {
+
+    }
+
+    @Override
+    public void onDialogLongClick(ChatDTO dialog) {
+
+    }
 }
