@@ -133,5 +133,9 @@
     <string name="thanks_for_using">Thank you so much for using CookAll :)</string>
     <string name="title_activity_chat">ChatActivity</string>
     <string name="title_activity_chat_detail">ChatDetailActivity</string>
+    <string name="title_activity_create_recipe">CreateRecipeActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
 
 </resources>

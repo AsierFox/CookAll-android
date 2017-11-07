@@ -40,9 +40,6 @@
                 android:resource="@xml/searchable_recipes" />
         </activity>
         <activity
-            android:name=".recipe.create.CreateRecipeActivity"
-            android:label="@string/create_new_recipe" />
-        <activity
             android:name=".recipe.detail.RecipeDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -63,9 +60,11 @@
             android:name=".test.TestActivity"
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <service
             android:name=".test.NotificationIntentService"
             android:enabled="true" />
+
         <activity
             android:name=".chat.ChatActivity"
             android:label="@string/title_activity_chat"
@@ -74,6 +73,10 @@
             android:name=".chat.detail.ChatDetailActivity"
             android:label="@string/title_activity_chat_detail"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recipe.create.CreateRecipeActivity"
+            android:label="@string/title_activity_create_recipe"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
