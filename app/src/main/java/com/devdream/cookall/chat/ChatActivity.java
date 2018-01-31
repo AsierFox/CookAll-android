@@ -12,6 +12,7 @@ import com.devdream.cookall.core.dto.ChatMessageDTO;
 import com.devdream.cookall.core.dto.ChatUserDTO;
 import com.squareup.picasso.Picasso;
 import com.stfalcon.chatkit.commons.ImageLoader;
+import com.stfalcon.chatkit.dialogs.DialogsListAdapter;
 import com.stfalcon.chatkit.dialogs.DialogsList;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class ChatActivity extends AppCompatActivity
         implements DialogsListAdapter.OnDialogClickListener<ChatDTO>,
         DialogsListAdapter.OnDialogLongClickListener<ChatDTO> {
 
-    private DialogsListAdapter dialogsAdapter;
+    private DialogsListAdapter<ChatDTO> dialogsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

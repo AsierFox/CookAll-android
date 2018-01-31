@@ -89,19 +89,19 @@
 
         <Button
             android:id="@+id/left_button"
-            style="@style/Widget.AppCompat.NotificationActionContainer"
+            style="@style/Widget.Compat.NotificationActionContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CLICK ME"
-            android:textAppearance="@style/Widget.AppCompat.NotificationActionText"/>
+            android:textAppearance="@style/Widget.Compat.NotificationActionText"/>
 
         <Button
             android:id="@+id/right_button"
-            style="@style/Widget.AppCompat.NotificationActionContainer"
+            style="@style/Widget.Compat.NotificationActionContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CLICK ME"
-            android:textAppearance="@style/Widget.AppCompat.NotificationActionText"/>
+            android:textAppearance="@style/Widget.Compat.NotificationActionText"/>
     </LinearLayout>
 
     <TextView
