@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "303292187125",
+    "firebase_url": "https://cookall-devdream.firebaseio.com",
+    "project_id": "cookall-devdream",
+    "storage_bucket": "cookall-devdream.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303292187125:android:e9529afe95db5ae9",
+        "android_client_info": {
+          "package_name": "com.devdream.cookall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303292187125-utpiq5i5er249dgntkc72uosa4r7jgkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUVb2110uYsKZW-vh9Ub95WTnIMzr1ZgY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
