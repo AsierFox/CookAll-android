@@ -12,6 +12,7 @@ buildscript {
         // in the individual module build.gradle files
 
         classpath 'io.realm:realm-gradle-plugin:4.0.0'
+        classpath 'com.google.gms:google-services:3.1.0'
     }
 }
 
