@@ -1,15 +1,16 @@
-package com.devdream.cookall.core.interceptors;
+package com.devdream.cookall.core.interactors;
 
 import com.devdream.cookall.core.context.AppContext;
 import com.devdream.cookall.core.dto.UserAuthDTO;
 import com.devdream.cookall.core.exceptions.NoNetworkAccessException;
 import com.devdream.cookall.core.listeners.OnLoginFetchedListener;
-import com.devdream.cookall.core.services.api.LoginAPIService;
+import com.devdream.cookall.core.services.login.LoginAPIService;
+import com.devdream.cookall.core.services.login.LoginService;
 import com.devdream.cookall.core.utils.ConnectivityUtil;
 
 public class LoginInteractor {
 
-    private LoginAPIService loginService;
+    private LoginService loginService;
 
     public LoginInteractor() {
         loginService = new LoginAPIService();

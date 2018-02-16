@@ -1,4 +1,4 @@
-package com.devdream.cookall.core.services.api;
+package com.devdream.cookall.core.services.login;
 
 import com.devdream.cookall.core.api.APIRestClient;
 import com.devdream.cookall.core.api.responses.LoginAuthResponse;
@@ -10,7 +10,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginAPIService {
+public class LoginAPIService implements LoginService {
 
     public void login(UserAuthDTO userDTO, final OnLoginFetchedListener onLoginFinishedListener) {
 

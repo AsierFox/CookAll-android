@@ -1,4 +1,4 @@
-package com.devdream.cookall.core.services.api;
+package com.devdream.cookall.core.services.recipe;
 
 import android.util.Log;
 
@@ -11,7 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RecipeAPIService {
+public class RecipeAPIService implements RecipeService {
 
     public void getAllRecipes(final OnRecipeFetchedListener onRecipeFetchedListener) {
 

@@ -1,7 +1,7 @@
 package com.devdream.cookall.main.explore;
 
 import com.devdream.cookall.core.dto.RecipeDTO;
-import com.devdream.cookall.core.interceptors.RecipeInteractor;
+import com.devdream.cookall.core.interactors.RecipeInteractor;
 import com.devdream.cookall.core.listeners.OnRecipeFetchedListener;
 
 import java.util.List;

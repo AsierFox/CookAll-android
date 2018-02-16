@@ -1,13 +1,14 @@
-package com.devdream.cookall.core.interceptors;
+package com.devdream.cookall.core.interactors;
 
 import com.devdream.cookall.core.context.AppContext;
 import com.devdream.cookall.core.listeners.OnRecipeFetchedListener;
-import com.devdream.cookall.core.services.api.RecipeAPIService;
+import com.devdream.cookall.core.services.recipe.RecipeAPIService;
+import com.devdream.cookall.core.services.recipe.RecipeService;
 import com.devdream.cookall.core.utils.ConnectivityUtil;
 
 public class RecipeInteractor {
 
-    private RecipeAPIService recipeAPIService;
+    private RecipeService recipeAPIService;
 
     public RecipeInteractor() {
         recipeAPIService = new RecipeAPIService();

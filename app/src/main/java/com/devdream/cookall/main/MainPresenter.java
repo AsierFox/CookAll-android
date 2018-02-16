@@ -3,7 +3,7 @@ package com.devdream.cookall.main;
 import android.view.View;
 import android.widget.Toast;
 
-import com.devdream.cookall.core.interceptors.RecipeInteractor;
+import com.devdream.cookall.core.interactors.RecipeInteractor;
 
 public class MainPresenter implements MainListener {
 

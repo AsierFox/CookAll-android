@@ -3,7 +3,7 @@ package com.devdream.cookall.login;
 import com.devdream.cookall.core.dto.LoginAuthDTO;
 import com.devdream.cookall.core.dto.UserAuthDTO;
 import com.devdream.cookall.core.exceptions.NoNetworkAccessException;
-import com.devdream.cookall.core.interceptors.LoginInteractor;
+import com.devdream.cookall.core.interactors.LoginInteractor;
 import com.devdream.cookall.core.listeners.OnLoginFetchedListener;
 
 public class LoginPresenter implements LoginListener, OnLoginFetchedListener {

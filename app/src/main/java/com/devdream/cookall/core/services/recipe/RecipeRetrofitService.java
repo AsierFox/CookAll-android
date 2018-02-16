@@ -1,4 +1,4 @@
-package com.devdream.cookall.core.services.api;
+package com.devdream.cookall.core.services.recipe;
 
 import com.devdream.cookall.core.api.responses.RecipeListResponse;
 
