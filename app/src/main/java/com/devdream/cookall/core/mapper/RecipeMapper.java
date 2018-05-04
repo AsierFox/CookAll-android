@@ -10,7 +10,7 @@ public abstract class RecipeMapper {
 
     public static List<RecipeDTO> recipeListResponseToRecipeListDTO(
             List<RecipeListResponse> recipesListResponse) {
-        List<RecipeDTO> recipes = new ArrayList<RecipeDTO>();
+        List<RecipeDTO> recipes = new ArrayList<>();
 
         for (RecipeListResponse recipeListResponse : recipesListResponse) {
             RecipeDTO recipe = new RecipeDTO();

@@ -8,16 +8,16 @@ import com.devdream.cookall.core.utils.ConnectivityUtil;
 
 public class RecipeInteractor {
 
-    private RecipeService recipeAPIService;
+    private RecipeService recipeService;
 
     public RecipeInteractor() {
-        recipeAPIService = new RecipeAPIService();
+        recipeService = new RecipeAPIService();
     }
 
     public void getAllRecipes(final OnRecipeFetchedListener onRecipeFetchedListener) {
 
         if (ConnectivityUtil.isConnected(AppContext.context)) {
-            recipeAPIService.getAllRecipes(onRecipeFetchedListener);
+            recipeService.getAllRecipes(onRecipeFetchedListener);
         }
         else {
             // TODO call Realm

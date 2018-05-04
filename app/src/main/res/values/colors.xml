@@ -5,7 +5,7 @@
 
     <!-- Pink material -->
     <color name="accent">#f98b81</color>
-    <color name="primaryColor">#f98b81</color>
+    <color name="primaryColor">#C2185B</color>
     <color name="primaryLightColor">#fbac85</color>
     <color name="primaryDarkColor">#ff8e6c</color>
     <color name="secondaryColor">#ff6275</color>

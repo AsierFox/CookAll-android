@@ -12,7 +12,7 @@ public abstract class APIRestClient {
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(Constants.API_BASE_URL)
+                    .baseUrl(Constants.API.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
