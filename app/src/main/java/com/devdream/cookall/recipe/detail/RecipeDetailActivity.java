@@ -153,7 +153,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
                 case 0:
                     return "Description";
                 case 1:
-                    return "Photos";
+                    return "Steps";
                 case 2:
                     return "Comments";
             }

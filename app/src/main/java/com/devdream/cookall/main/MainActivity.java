@@ -1,7 +1,9 @@
 package com.devdream.cookall.main;
 
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -90,6 +92,27 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+            case R.id.filter_recipes:
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+
+                dialogBuilder.setView(
+                        getLayoutInflater().inflate(
+                                R.layout.dialog_search_recipes_filter, null))
+                        .setPositiveButton(R.string.filter, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                // TODO Filter recipes
+                            }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                dialogBuilder.create().show();
+
+                return true;
             case R.id.create_new_recipe:
                 startActivity(new Intent(this, CreateRecipeActivity.class));
                 return true;

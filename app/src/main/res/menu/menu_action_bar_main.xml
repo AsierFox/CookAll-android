@@ -14,6 +14,12 @@
 
     <!-- TODO Change action to onClicks -->
     <item
+        android:id="@+id/filter_recipes"
+        app:showAsAction="always"
+        android:title="@string/filter_recipes"
+        android:icon="@drawable/ic_filter_search_24dp" />
+
+    <item
         android:id="@+id/create_new_recipe"
         app:showAsAction="always"
         android:title="@string/create_a_recipe"
