@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.devdream.cookall.main.MainActivity">
 
+    <!-- TODO Change action to onClicks -->
     <item
         android:id="@+id/search_recipes"
-        android:title="@string/search_recipes"
+        app:showAsAction="always"
+        android:title="@string/filter_recipes"
         android:icon="@drawable/ic_search_24dp"
-        app:showAsAction="collapseActionView|ifRoom"
         app:actionViewClass="android.support.v7.widget.SearchView" />
 
-    <!-- TODO Change action to onClicks -->
     <item
         android:id="@+id/filter_recipes"
         app:showAsAction="always"
@@ -21,9 +21,13 @@
 
     <item
         android:id="@+id/create_new_recipe"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         android:title="@string/create_a_recipe"
         android:icon="@drawable/ic_add_circle_white_24dp" />
+
+    <item
+        android:id="@+id/cookers_ranking"
+        android:title="@string/cookers_ranking" />
 
     <item
         android:id="@+id/profile"
@@ -34,12 +38,12 @@
         android:title="@string/action_settings" />
 
     <item
-        android:title="@string/logout"
-        android:onClick="logout" />
-
-    <item
         android:title="@string/feedback"
         android:onClick="navigateFeedback" />
+
+    <item
+        android:title="@string/logout"
+        android:onClick="logout" />
 
     <item
         android:title="Test"

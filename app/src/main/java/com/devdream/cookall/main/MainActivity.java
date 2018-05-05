@@ -22,6 +22,7 @@ import com.devdream.cookall.main.explore.ExploreRecipesFragment;
 import com.devdream.cookall.main.favorites.FavoriteRecipesFragment;
 import com.devdream.cookall.main.mine.MyRecipesFragment;
 import com.devdream.cookall.profile.UserProfileActivity;
+import com.devdream.cookall.ranking.CookersRankingActivity;
 import com.devdream.cookall.recipe.create.CreateRecipeActivity;
 import com.devdream.cookall.recipe.detail.RecipeDetailActivity;
 import com.devdream.cookall.settings.SettingsActivity;
@@ -111,7 +112,9 @@ public class MainActivity extends AppCompatActivity implements
                         });
 
                 dialogBuilder.create().show();
-
+                return true;
+            case R.id.cookers_ranking:
+                startActivity(new Intent(this, CookersRankingActivity.class));
                 return true;
             case R.id.create_new_recipe:
                 startActivity(new Intent(this, CreateRecipeActivity.class));
@@ -123,7 +126,6 @@ public class MainActivity extends AppCompatActivity implements
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
         }
-
         return false;
     }
 

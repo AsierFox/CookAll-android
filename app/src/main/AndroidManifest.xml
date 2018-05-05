@@ -76,6 +76,10 @@
         <activity
             android:name=".recipe.create.CreateRecipeActivity"
             android:label="@string/title_activity_create_recipe"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ranking.CookersRankingActivity"
+            android:label="@string/title_activity_cookers_ranking"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
