@@ -45,14 +45,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Notification Sample App"
-            android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"/>
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title"/>
 
         <TextView
             android:id="@+id/content_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Expand me to see a detailed message!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Notification"/>
+            android:textAppearance="@style/TextAppearance.Compat.Notification"/>
     </LinearLayout>
 
     <TextView
@@ -63,6 +63,6 @@
         android:layout_alignParentTop="true"
         android:paddingRight="3.5dp"
         android:paddingTop="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Time"/>
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Time"/>
 
 </RelativeLayout>

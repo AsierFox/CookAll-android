@@ -4,9 +4,9 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.RemoteViews;
@@ -84,7 +84,7 @@ public class TestActivity extends AppCompatActivity {
                 .setCustomContentView(collapsedView)
                 .setCustomBigContentView(expandedView)
                 // setting style to DecoratedCustomViewStyle() is necessary for custom views to display
-                .setStyle(new android.support.v7.app.NotificationCompat.DecoratedCustomViewStyle());
+                .setStyle(new NotificationCompat.DecoratedCustomViewStyle());
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         final int NOTIFICATION_ID = 2;

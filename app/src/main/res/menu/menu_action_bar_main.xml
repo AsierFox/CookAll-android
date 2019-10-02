@@ -11,7 +11,7 @@
         app:showAsAction="always"
         android:title="@string/filter_recipes"
         android:icon="@drawable/ic_search_24dp"
-        app:actionViewClass="android.support.v7.widget.SearchView" />
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
     <item
         android:id="@+id/filter_recipes"
