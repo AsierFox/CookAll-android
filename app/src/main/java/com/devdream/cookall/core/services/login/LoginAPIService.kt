@@ -17,7 +17,8 @@ class LoginAPIService : LoginService {
         val loginAPIService = APIRestClient.client
                 .create(LoginRetrofitService::class.java)
 
-        val call = loginAPIService.login(userDTO.email, userDTO.password)
+        val call = loginAPIService.login(userDTO.email as String, userDTO.password as String)
+
         val callback = object : Callback<LoginAuthResponse> {
 
             override fun onResponse(call: Call<LoginAuthResponse>, response: Response<LoginAuthResponse>) {

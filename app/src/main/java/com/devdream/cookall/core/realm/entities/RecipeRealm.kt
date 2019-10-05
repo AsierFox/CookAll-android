@@ -6,13 +6,13 @@ import io.realm.annotations.PrimaryKey
 open class RecipeRealm : RealmObject {
 
     @PrimaryKey
-    val id: String
+    var id: String? = null
     var title: String? = null
     var description: String? = null
 
     constructor() {}
 
-    constructor(_id: String, _title: String, _description: String) {
+    constructor(_id: String?, _title: String, _description: String) {
         id = _id
         title = _title
         description = _description

@@ -11,8 +11,7 @@ class AppContext : Application() {
     }
 
     companion object {
-
-        var context: Context
+        var context: Context? = null
     }
 
 }

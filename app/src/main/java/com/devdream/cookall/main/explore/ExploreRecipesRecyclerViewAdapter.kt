@@ -24,7 +24,7 @@ class ExploreRecipesRecyclerViewAdapter(private val recipes: List<RecipeDTO>,
         viewHolder.titleTextView.text = viewHolder.recipe!!.title
 
         viewHolder.view.setOnClickListener {
-            mListener?.onListFragmentInteraction(viewHolder.recipe)
+            mListener?.onListFragmentInteraction(viewHolder.recipe as RecipeDTO)
         }
     }
 

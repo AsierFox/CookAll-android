@@ -11,7 +11,7 @@ object APIRestClient {
 
     val client: Retrofit
         get() {
-            if (retrofit == null) {
+            if (null == retrofit) {
                 retrofit = Retrofit.Builder()
                         .baseUrl(Constants.API.BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())

@@ -54,7 +54,6 @@ dependencies {
     api 'com.squareup.retrofit2:retrofit:2.6.2'
     api 'com.squareup.retrofit2:converter-gson:2.6.2'
     api 'com.squareup.picasso:picasso:2.71828'
-    api 'com.github.stfalcon:chatkit:0.2.2'
     api 'com.google.firebase:firebase-messaging:20.0.0'
 
     testImplementation 'junit:junit:4.12'

@@ -4,6 +4,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import android.view.MenuItem
+import androidx.fragment.app.Fragment
 
 import com.devdream.cookall.R
 import com.devdream.cookall.main.explore.ExploreRecipesFragment
@@ -22,12 +23,13 @@ class BottomMenuSelectedListener(private val mainActivity: MainActivity) : Botto
         when (item.itemId) {
             R.id.favorite_recipes_list -> {
                 if (fragmentManager.findFragmentByTag(FavoriteRecipesFragment.TAG) == null) {
+
                     transaction.add(R.id.fragment_container,
-                            mainActivity.favoriteRecipesFragment,
+                            mainActivity.favoriteRecipesFragment as Fragment,
                             FavoriteRecipesFragment.TAG)
                 }
 
-                transaction.replace(R.id.fragment_container, mainActivity.favoriteRecipesFragment)
+                transaction.replace(R.id.fragment_container, mainActivity.favoriteRecipesFragment as Fragment)
 
                 transaction.addToBackStack(null)
                 transaction.commit()
@@ -37,11 +39,11 @@ class BottomMenuSelectedListener(private val mainActivity: MainActivity) : Botto
             R.id.navigation_dashboard -> {
                 if (fragmentManager.findFragmentByTag(ExploreRecipesFragment.TAG) == null) {
                     transaction.add(R.id.fragment_container,
-                            mainActivity.exploreRecipesFragment,
+                            mainActivity.exploreRecipesFragment as Fragment,
                             ExploreRecipesFragment.TAG)
                 }
 
-                transaction.replace(R.id.fragment_container, mainActivity.exploreRecipesFragment)
+                transaction.replace(R.id.fragment_container, mainActivity.exploreRecipesFragment as Fragment)
 
                 transaction.addToBackStack(null)
                 transaction.commit()
@@ -51,11 +53,11 @@ class BottomMenuSelectedListener(private val mainActivity: MainActivity) : Botto
             R.id.navigation_notifications -> {
                 if (fragmentManager.findFragmentByTag(MyRecipesFragment.TAG) == null) {
                     transaction.add(R.id.fragment_container,
-                            mainActivity.myRecipesFragment,
+                            mainActivity.myRecipesFragment as Fragment,
                             MyRecipesFragment.TAG)
                 }
 
-                transaction.replace(R.id.fragment_container, mainActivity.myRecipesFragment)
+                transaction.replace(R.id.fragment_container, mainActivity.myRecipesFragment as Fragment)
 
                 transaction.addToBackStack(null)
                 transaction.commit()

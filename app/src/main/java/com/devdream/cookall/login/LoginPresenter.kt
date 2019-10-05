@@ -7,11 +7,8 @@ import com.devdream.cookall.core.interactors.LoginInteractor
 import com.devdream.cookall.core.listeners.OnLoginFetchedListener
 
 class LoginPresenter(private val loginListener: LoginListener) : LoginListener, OnLoginFetchedListener {
-    private val loginInterator: LoginInteractor
 
-    init {
-        loginInterator = LoginInteractor()
-    }
+    private val loginInterator: LoginInteractor = LoginInteractor()
 
     fun login(email: String, password: String) {
         startLoginProcess()

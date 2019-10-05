@@ -13,6 +13,7 @@ import androidx.appcompat.widget.SearchView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.fragment.app.Fragment
 
 import com.devdream.cookall.R
 import com.devdream.cookall.core.dto.RecipeDTO
@@ -35,9 +36,9 @@ class MainActivity : AppCompatActivity(), MainListener, FavoriteRecipesFragment.
 
     private var mainPresenter: MainPresenter? = null
 
-    var favoriteRecipesFragment: FavoriteRecipesFragment
-    var exploreRecipesFragment: ExploreRecipesFragment
-    var myRecipesFragment: MyRecipesFragment
+    var favoriteRecipesFragment: FavoriteRecipesFragment? = null
+    var exploreRecipesFragment: ExploreRecipesFragment? = null
+    var myRecipesFragment: MyRecipesFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity(), MainListener, FavoriteRecipesFragment.
         // TODO Refactor to BottomMenuSelectedListener
         supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, favoriteRecipesFragment, FavoriteRecipesFragment.TAG)
+                .add(R.id.fragment_container, favoriteRecipesFragment as Fragment, FavoriteRecipesFragment.TAG)
                 .commit()
 
         mainPresenter = MainPresenter(this)

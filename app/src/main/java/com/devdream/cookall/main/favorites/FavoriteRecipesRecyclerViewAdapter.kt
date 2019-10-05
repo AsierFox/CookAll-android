@@ -24,7 +24,7 @@ class FavoriteRecipesRecyclerViewAdapter(private val recipes: List<RecipeDTO>,
         holder.titleTextView.text = recipes[position].title
 
         holder.view.setOnClickListener {
-            mListener?.onListFragmentInteraction(holder.recipe)
+            mListener?.onListFragmentInteraction(holder.recipe as RecipeDTO)
         }
     }
 

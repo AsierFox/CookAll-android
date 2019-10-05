@@ -5,13 +5,10 @@ import com.devdream.cookall.core.interactors.RecipeInteractor
 import com.devdream.cookall.core.listeners.OnRecipeFetchedListener
 
 class ExploreRecipesPresenter(private val exploreRecipesListener: ExploreRecipesListener) : ExploreRecipesListener, OnRecipeFetchedListener {
-    private val recipeInteractor: RecipeInteractor
+
+    private val recipeInteractor: RecipeInteractor = RecipeInteractor()
 
     private val recipes: List<RecipeDTO>? = null
-
-    init {
-        recipeInteractor = RecipeInteractor()
-    }
 
     fun getAllRecipes() {
         recipeInteractor.getAllRecipes(this)
