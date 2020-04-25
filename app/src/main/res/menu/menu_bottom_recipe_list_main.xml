@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- The item IDs must MATCH with the navigation/nav_graph fragment IDs -->
+
+    <item
+        android:id="@+id/FavoriteRecipeListFragment"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:title="@string/favorites" />
+
+    <item
+        android:id="@+id/ExploreRecipeListFragment"
+        android:icon="@drawable/ic_search_24dp"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"
+        android:title="@string/explore" />
+
+    <item
+        android:id="@+id/MyRecipeListFragment"
+        android:icon="@drawable/ic_recipe_black_24dp"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom"
+        android:title="@string/my_recipes" />
+
+</menu>

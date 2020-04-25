@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingEnd="15dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/recipe_main_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/recipe_logo"
+        android:background="@drawable/img_circle_effect" />
+
+    <TextView
+        android:id="@+id/recipe_title"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_toStartOf="@+id/imageButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:text="Recipe name haha" />
+
+    <TextView
+        android:id="@+id/recipe_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        android:layout_below="@+id/recipe_title"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_toStartOf="@+id/imageButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit felis et quam faucibus maximus. Proin tellus ante.." />
+
+    <ImageButton
+        android:id="@+id/add_remove_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:layout_below="@+id/recipe_description"
+        android:background="@drawable/ic_add_like_24dp" />
+
+    <TextView
+        android:id="@+id/recipe_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/add_remove_like"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="3 Likes" />
+
+    <ImageButton
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/recipe_likes"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/ic_comment_24dp" />
+
+    <TextView
+        android:id="@+id/recipe_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/comments"
+        android:layout_below="@+id/recipe_description"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="12sp"
+        android:textColor="#a7a7a7"
+        android:text="3 Comments" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/recipe_comments"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/recipe_main_photo"
+        android:background="#b3c0c0c0" />
+
+    <ImageButton
+        android:id="@+id/share_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recipe_likes"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_share_24dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/share_recipe"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_favorited_24dp"
+        android:id="@+id/imageButton" />
+
+</RelativeLayout>

@@ -11,7 +11,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -49,7 +48,6 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Subject" />
@@ -57,12 +55,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/step"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp"
                 android:layout_marginBottom="10dp"
@@ -78,13 +74,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Send feeback"
             android:layout_marginTop="30dp"
-            android:theme="@style/loginButton"
-            android:onClick="sendFeedback" />
+            android:theme="@style/loginButton" />
 
     </LinearLayout>
 

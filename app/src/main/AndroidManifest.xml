@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.devdream.cookall">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    package="com.example.cookall">
 
     <application
-        android:name=".core.context.AppContext"
+        android:name="com.devdream.cookall.context.AppContext"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".splash.SplashActivity"
-            android:label="@string/app_name"
+            android:name="com.devdream.cookall.modules.auth.AuthActivity"
+            android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,60 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.LoginActivity" />
+
         <activity
-            android:name=".main.MainActivity"
-            android:label="@string/title_activity_main"
-            android:parentActivityName=".main.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.devdream.cookall.main.MainActivity" />
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable_recipes" />
+            android:name="com.devdream.cookall.modules.recipe.RecipeListMainActivity"
+            android:label="@string/app_name">
         </activity>
-        <activity
-            android:name=".recipe.detail.RecipeDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity
-            android:name=".profile.UserProfileActivity"
-            android:label="@string/title_activity_user_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".signup.SignUpActivityActivity"
-            android:label="@string/sign_up" />
-        <activity
-            android:name=".feedback.FeedbackActivity"
-            android:label="@string/feedback"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".test.TestActivity"
-            android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <service
-            android:name=".test.NotificationIntentService"
-            android:enabled="true" />
-
-        <activity
-            android:name=".chat.ChatActivity"
-            android:label="@string/title_activity_chat"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".chat.detail.ChatDetailActivity"
-            android:label="@string/title_activity_chat_detail"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".recipe.create.CreateRecipeActivity"
-            android:label="@string/title_activity_create_recipe"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ranking.CookersRankingActivity"
-            android:label="@string/title_activity_cookers_ranking"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
